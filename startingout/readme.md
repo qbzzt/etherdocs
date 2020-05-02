@@ -10,7 +10,10 @@ The directions in this tutorial assume you are using Linux (or possibly another 
 ```
 sudo apt install npm
 ```
-2. Blah
+2. Install [the truffle development environment](https://www.trufflesuite.com/docs/truffle/overview) and [the ganache blockchain simulator]. The `-g` parameter declares that this package is to be installed globally, for all users of this computer. That requires root privleges.
+```
+sudo npm install -g truffle ganache-cli
+```
 1. Blah
 
 ## Your First Contract
