@@ -17,7 +17,7 @@ sudo npm install -g truffle ganache-cli
 
 ## Your First Contract
 
-With the environment set up, you can create a contract. Contract 
+With the environment set up, you can create a contract.
 
 ### Create the Skeleton
 
@@ -36,11 +36,37 @@ rm migrations/2_deploy_contracts.js
 
 ### Write the Contract
 
-Write the contract in the `contracts` directory. Here is a simple contract (you can read the full source code here):
+Write the contract in the `contracts` directory. Here is a simple contract [(you can get the source code without comments here)](https://github.com/qbzzt/etherdocs/blob/master/startingout/Counter.sol):
+
+This line specifies the acceptable versions of the Solidity programming language. In this case we only allow 0.5.x versions. 
+```
+pragma solidity >=0.5.0 <0.6.0;
+```
+
+Define a contract called `Counter`. A contract functions in many ways like [a class in Object Oriented Programming](https://en.wikipedia.org/wiki/Class_(computer_programming)). It contains variables, 
+```
+contract Counter {
+```
+
+This is a field variable. The type, `uint`, is a 256 bit unsigned integer. While 
+```
+        uint value = 0;
+```     
+
+```
+        event Asked4Value(uint, address);
+
+        function increment() external {
+                value++;
+                emit Asked4Value(value, msg.sender);
+        }
+}
+```
 
 
+### Compile and Test the Contract
 
-### Compile and test the Contract
+### Write Contract Tests
 
 ## Deploy to a Test Network
 
