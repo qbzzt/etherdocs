@@ -17,11 +17,28 @@ sudo npm install -g truffle ganache-cli
 
 ## Your First Contract
 
-With the environment set up, you can create a contract.
+With the environment set up, you can create a contract. Contract 
 
 ### Create the Skeleton
 
+Contracts require a somewhat complicated directory structure. The easiest way to create it is to copy a sample project and then delete the project-specific files.
+
+1. Create a new directory and unbox the MetaCoin project
+```
+mkdir contract
+truffle unbox metacoin
+```
+2. Delete the project-specific files.
+```
+rm contracts/MetaCoin.sol
+rm migrations/2_deploy_contracts.js
+```
+
 ### Write the Contract
+
+Write the contract in the `contracts` directory. Here is a simple contract (you can read the full source code here):
+
+
 
 ### Compile and test the Contract
 
