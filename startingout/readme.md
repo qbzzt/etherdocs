@@ -33,7 +33,7 @@ truffle unbox metacoin
 rm contracts/MetaCoin.sol
 rm migrations/2_deploy_contracts.js
 ```
-3. Edit `truffle-config.js`. Uncomment the network definition and change the port to 8545 (the default port for `ganache-cli`). The edited file should include these lines:
+3. Edit `truffle-config.js`. Uncomment the network definition and change the port to 8545 (the default port for `ganache-cli`). The edited file should include these lines. You can keep the test network or remove it.
 ```
 module.exports = {
   networks: {
@@ -50,7 +50,7 @@ module.exports = {
 
 ### Write the Contract
 
-Write the contract in the `contracts` directory. Here is a simple contract [(you can get the source code without comments here)](https://github.com/qbzzt/etherdocs/blob/master/startingout/Counter.sol):
+Write the contract in the `contracts` directory. Here is a simple contract [(you can get the source code without comments here)](https://github.com/qbzzt/etherdocs/blob/master/startingout/Counter.sol). For the rest of the tutorial, I am going to assume this is the contract you're using.
 
 This line specifies the acceptable versions of the Solidity programming language. In this case we only allow 0.5.x versions. 
 ```
@@ -85,6 +85,35 @@ The `external` modifier means that this function can only be called from outside
 
 
 ### Compile and Test the Contract
+
+1. Run this command in a separate terminal to start the Ganache test network:
+```
+ganache-cli -v 
+```
+2. Compile the contract:
+```
+truffle compile
+```
+3. Connect to the Ganache network you are running locally:
+```
+truffle console --network development
+```
+4. Deploy the contract:
+```
+contract = await Counter.new()
+```
+5. Run the `increment` function:
+```
+contract.incremenet()
+```
+6. To view the last event from the contract, which gives us the counter's 
+value, run this:
+```
+(await contract.getPastEvents())[0].returnValues[0]
+```
+7. Repeat the previous two steps several times to see the counter is
+incremented correctly.
+
 
 ### Write Contract Tests
 
