@@ -48,14 +48,20 @@ Define a contract called `Counter`. A contract functions in many ways like [a cl
 contract Counter {
 ```
 
-This is a field variable. The type, `uint`, is a 256 bit unsigned integer. While 
+This is a field variable. The type, `uint`, is a 256 bit unsigned integer. All the fields in a contract are effectively public. Ethereum code is executed by multiple computers in multiple locations, and can be verified by anybody. This would be impossible if some part of the contract state had been unreadable.
 ```
         uint value = 0;
 ```     
 
+Contract methods that modify the blockchain (for example, by incrementing the counter) cannot return a value to the caller. Instead, they can emit a global event. The caller could listen to this event, and receive the response that way.
 ```
         event Asked4Value(uint, address);
+```
 
+The `increment` function does not take any parameters. It increments `value` and then emits an `Asked4Value` event with the new value and the identity of the caller to which it is responding (`msg.sender` means the sender of this message).
+
+The `external` modifier means that this function can only be called from outside the contract. By default functions are internal, and are only accessible from within the contract. This function needs to be called from outside the contract.
+```
         function increment() external {
                 value++;
                 emit Asked4Value(value, msg.sender);
