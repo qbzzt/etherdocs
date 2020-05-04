@@ -23,9 +23,10 @@ With the environment set up, you can create a contract.
 
 Contracts require a somewhat complicated directory structure. The easiest way to create it is to copy a sample project and then delete the project-specific files.
 
-1. Create a new directory and unbox the MetaCoin project
+1. Create a new directory and unbox the MetaCoin project there
 ```
 mkdir contract
+cd contract
 truffle unbox metacoin
 ```
 2. Delete the project-specific files.
