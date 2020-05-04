@@ -113,6 +113,7 @@ value, run this:
 7. Repeat the previous two steps several times to see the counter is
 incremented correctly.
 
+As you may have realized from the commands above, `truffle` executes JavaScript. The `await` keyword is used in JavaScript when a process can take a long time to avoid tying up the process ([you can read more about it here](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Async_await)).
 
 ### Write Contract Tests
 
