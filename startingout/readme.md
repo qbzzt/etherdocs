@@ -135,13 +135,17 @@ value, run this:
 (await contract.getPastEvents())[0].returnValues[0]
 ```
 7. Repeat the previous two steps several times to see the counter is
-incremented correctly.
+incremented correctly. Then type `.exit` to return to the command line.
 
 As you may have realized from the commands above, `truffle` executes JavaScript. The `await` keyword is used in
 JavaScript when a process can take a long time to avoid tying up the process 
 ([you can read more about it here](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Async_await)).
 
 ### Write Contract Tests
+
+It is very important to have automated tests to make sure your contract acts as it is supposed to. This is particularly
+important in a dapp, because once a contract is deployed it is immutable. It cannot be fixed, it is going to stay in the 
+blockchain forever.
 
 ## Deploy to a Test Network
 
