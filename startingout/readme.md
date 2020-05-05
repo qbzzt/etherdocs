@@ -152,9 +152,14 @@ Tests are supposed to go in `.../test`, and are typically written in JavaScript 
 which contains a number of tests for the `Counter` contract. To get just the file without the comments, 
 [see here](https://github.com/qbzzt/etherdocs/blob/master/startingout/counter.js).
 
+We need information about the contract to test it.
+
 ```javascript
 const Counter = artifacts.require("Counter");
+```
 
+Here we declare the contract we are going to test
+```javascript
 contract("Counter", async accounts => {
 
 
