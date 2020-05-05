@@ -147,6 +147,54 @@ It is very important to have automated tests to make sure your contract acts as 
 important in a dapp, because once a contract is deployed it is immutable. It cannot be fixed, it is going to stay in the 
 blockchain forever.
 
+Tests are supposed to go in `.../test`, and are typically written in JavaScript (you can also write them in Solidity, 
+[see here](https://www.trufflesuite.com/docs/truffle/testing/writing-tests-in-solidity). Here is `test/counter.js`, 
+which contains a number of tests for the `Counter` contract. To get just the file without the comments, 
+[see here](https://github.com/qbzzt/etherdocs/blob/master/startingout/counter.js).
+
+```javascript
+const Counter = artifacts.require("Counter");
+
+contract("Counter", async accounts => {
+
+
+        it('should return one after incrementing once', async () => {
+                var counter = await Counter.new();
+                await counter.increment();
+                const events = await counter.getPastEvents();
+                const retVal = events[0].returnValues[0];
+                assert.equal(retVal, 1, "The first increment didn't return one");
+        });   // it should return one after incrementing once
+
+
+        it('should return two after incrementing twice', async () => {
+                var counter = await Counter.new();
+
+                await counter.increment();
+                await counter.increment();
+
+                retVal = (await counter.getPastEvents())[0].returnValues[0];
+                assert.equal(retVal, 2, "The two increments didn't return two");
+        });   // it should return two after incrementing twice
+
+        it('should return n after incrementing n times', async () => {
+                var counter = await Counter.new();
+                var arr = [];
+                const max = 10;
+
+                for(var i=0; i<max; i++)
+                        arr.push(counter.increment());
+
+                await Promise.all(arr);
+
+                retVal = (await counter.getPastEvents())[0].returnValues[0];
+                assert.equal(retVal, max, `${max} increments didn't return ${max}`);
+        });   // it should return n after incrementing n times
+
+});
+```
+
+
 ## Deploy to a Test Network
 
 ### MetaMask
