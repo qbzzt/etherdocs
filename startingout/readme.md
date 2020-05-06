@@ -200,16 +200,6 @@ array called `returnValues`.
         });   // it should return one after incrementing once
 
 
-        it('should return two after incrementing twice', async () => {
-                var counter = await Counter.new();
-
-                await counter.increment();
-                await counter.increment();
-
-                retVal = (await counter.getPastEvents())[0].returnValues[0];
-                assert.equal(retVal, 2, "The two increments didn't return two");
-        });   // it should return two after incrementing twice
-
         it('should return n after incrementing n times', async () => {
                 var counter = await Counter.new();
                 var arr = [];
