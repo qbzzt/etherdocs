@@ -198,20 +198,31 @@ array called `returnValues`.
                 const retVal = events[0].returnValues[0];
                 assert.equal(retVal, 1, "The first increment didn't return one");
         });   // it should return one after incrementing once
+```
 
+This is a second test, which increments ten times and then verifies that the last event 
+is the correct number.
 
+```javascript
         it('should return n after incrementing n times', async () => {
                 var counter = await Counter.new();
                 var arr = [];
-                const max = 10;
+                const n = 10;
 
-                for(var i=0; i<max; i++)
+                for(var i=0; i<n; i++)
                         arr.push(counter.increment());
+```
 
+[`Promise.all`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) 
+only returns when all the Promises in an array have been resolved. In this case, after all ten transaction
+have been processed. Using `Promise.all` lets the transactions be processed in parallel, instead of having 
+to wait until a transaction is done before starting up the next one.
+
+```javascript
                 await Promise.all(arr);
 
                 retVal = (await counter.getPastEvents())[0].returnValues[0];
-                assert.equal(retVal, max, `${max} increments didn't return ${max}`);
+                assert.equal(retVal, n, `${n} increments didn't return ${n}`);
         });   // it should return n after incrementing n times
 
 });
