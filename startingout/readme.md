@@ -231,9 +231,26 @@ to wait until a transaction is done before starting up the next one.
 
 ## Deploy to a Test Network
 
+After you write and debug a contract locally, the next step is to deploy it to a test network. There are several test networks,
+but for the purpose of this tutorial I chose to use the [Kovan network](https://kovan-testnet.github.io/website/).
+
 ### MetaMask
 
+To interact with a network you an account (a public/private key pair). The easiest way to set one up is to use a wallet such as
+the [MetaMask](https://metamask.io/) browser extension for Chrome. It takes you through the process of creating an account.
+
+Note that this is a testing account. You are going to use the twelve use pass phrase for this account in your source code,
+source code you may commit to a public repository. Do **not** use the same account to hold actual assets. 
+
 ### Kovan
+
+Click on the MetaMask fox icon to open it. At the top of the popup you see your current network, by default the Main Ethereum 
+Network. Click it and select **Kovan Test Network**. Now you're connected to the test network.
+
+To deploy a contract you need gas, which you need to buy with ether. Luckily, the Kovan network has two ways to get ether for free:
+1. Get your account address. It appears in MetaMask under the network you're using. Click it to copy to the clipboard.
+1. If you have a GitHub account, [click here](https://faucet.kovan.network/), log on using that account, and paste your address. If 
+you do not have a GitHub account, [get one here](https://github.com/join). 
 
 ### Deploy and Test
 
