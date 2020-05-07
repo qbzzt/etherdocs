@@ -17,8 +17,8 @@ command to do this on versions of Linux that are based on Debian, such as Ubuntu
 sudo apt install npm
 ```
 2. Install [the truffle development environment](https://www.trufflesuite.com/docs/truffle/overview) and 
-[the ganache blockchain simulator]. The `-g` parameter declares that this package is to be installed globally, for 
-all users of this computer. That requires root privileges.
+[the ganache blockchain simulator](https://www.trufflesuite.com/ganache). The `-g` parameter declares that this 
+package is to be installed globally, for all users of this computer. That requires root privileges.
 ```
 sudo npm install -g truffle ganache-cli
 ```
@@ -37,9 +37,9 @@ Contracts require a somewhat complicated directory structure. The easiest way to
 mkdir workdir
 cd workdir
 truffle init
+npm install @truffle/hdwallet-provider
 ```
-2. Edit `truffle-config.js`. Uncomment the network definition and change the port to 8545 (the default port 
-for `ganache-cli`). The edited file should include these lines. You can keep the test network or remove it.
+2. Edit `truffle-config.js`. Make sure the edited file includes these lines:
 ```javascript
 module.exports = {
   networks: {
@@ -263,7 +263,7 @@ At the top of the file configure the package you use to communicate, the Kovan U
 truffle know your private key:
 
 ```javascript
-var Provider = require('truffle-hdwallet-provider');
+var Provider = require('@truffle/hdwallet-provider');
 var mnemonic = '<your value goes here>';
 var kovanUrl = "https://kovan.infura.io/v3/c3422181d0594697a38defe7706a1e5b";
 ```
@@ -279,9 +279,52 @@ Within the `networks` definition add another network (and remember to add a comm
 
 ### Deploy and Test
 
+Deploying to Kovan takes a lot longer, because everything has to be properly written into the blockchain. 
+Also, we don't want to redeploy each time, so we make a note of the address to which the contract is deployed.
+
+```javascript
+truffle console --network kovan
+
+contract = await Counter.new()
+contract.address
+```
+
+If you know an existing contract's address, you can call it from truffle's console mode:
+
+```javascript
+(await <contract>.at(<address>)).<function>(<parameters, if any>)
+```
+
+For example, I created an instance of `Counter` and deployed it to the address `0xB2086099f3b764a167B923A670bf8A7FbD46A1c6`.
+Here is how you increment it from the truffle console. Note that you need to have a compiled version of `Counter`, or at
+least the ABI (application binary interface) from one.
+
+```javascript
+(await Counter.at('0xB2086099f3b764a167B923A670bf8A7FbD46A1c6')).increment()
+```
+
+To increment the counter and get the result you can run this code in the truffle console. Note that you need to use
+`await` twice, first to create the contract object and then to wait for the results from it. Both are slow actions.
+
+```javascript
+contract = await Counter.at('0xB2086099f3b764a167B923A670bf8A7FbD46A1c6')
+results = await contract.increment()
+results.logs[0].args[0].toString()
+```
+
+If you want to run your automated tests on Kovan you can do that, but it is slow and expensive, and tests could
+fail due to a timeout. The tests in `counter.js` cost me 0.0153 Ether (which luckily is free on Kovan) and about
+52 seconds.
+
+```
+truffle test --network kovan
+```
 
 
 ## Web User Interface
 
 ## Conclusion
+
+
+[//] Inform Lou Said on Facebook when ready
 
