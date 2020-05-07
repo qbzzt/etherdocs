@@ -244,13 +244,15 @@ source code you may commit to a public repository. Do **not** use the same accou
 
 ### Kovan
 
-Click on the MetaMask fox icon to open it. At the top of the popup you see your current network, by default the Main Ethereum 
-Network. Click it and select **Kovan Test Network**. Now you're connected to the test network.
+Click on the MetaMask fox icon to open it. At the top of the popup you see your current network, by 
+default the Main Ethereum Network. Click it and select **Kovan Test Network**. Now you're connected 
+to the test network.
 
 To deploy a contract you need gas, which you need to buy with ether. Luckily, the Kovan network has two ways to get ether for free:
 1. Get your account address. It appears in MetaMask under the network you're using. Click it to copy to the clipboard.
-1. If you have a GitHub account, [click here](https://faucet.kovan.network/), log on using that account, and paste your address. If 
-you do not have a GitHub account, [get one here](https://github.com/join). 
+1. If you do not have a GitHub account, [get one here](https://github.com/join). 
+1. If you have a GitHub account, [click here](https://faucet.kovan.network/), log on using that 
+account, and paste your address. 
 
 ### Deploy and Test
 
