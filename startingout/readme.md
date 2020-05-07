@@ -42,6 +42,7 @@ truffle unbox metacoin
 ```
 rm contracts/MetaCoin.sol
 rm migrations/2_deploy_contracts.js
+rm test/*
 ```
 3. Edit `truffle-config.js`. Uncomment the network definition and change the port to 8545 (the default port 
 for `ganache-cli`). The edited file should include these lines. You can keep the test network or remove it.
