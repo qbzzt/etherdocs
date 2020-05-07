@@ -14,15 +14,15 @@ contract("Counter", async accounts => {
         it('should return n after incrementing n times', async () => {
                 var counter = await Counter.new();
                 var arr = [];
-                const max = 10;
+                const n = 10;
 
-                for(var i=0; i<max; i++)
+                for(var i=0; i<n; i++)
                         arr.push(counter.increment());
 
                 await Promise.all(arr);
 
                 retVal = (await counter.getPastEvents())[0].returnValues[0];
-                assert.equal(retVal, max, `${max} increments didn't return ${max}`);
+                assert.equal(retVal, n, `${n} increments didn't return ${n}`);
         });   // it should return n after incrementing n times
 
 });
