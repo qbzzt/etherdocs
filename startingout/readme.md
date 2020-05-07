@@ -229,6 +229,10 @@ to wait until a transaction is done before starting up the next one.
 });
 ```
 
+Use this command to actually run the tests:
+```
+truffle test
+```
 
 ## Deploy to a Test Network
 
