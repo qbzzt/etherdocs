@@ -29,22 +29,16 @@ With the environment set up, you can create a contract.
 
 ### Create the Skeleton
 
-Contracts require a somewhat complicated directory structure. The easiest way to create it is to copy a sample 
-project and then delete the project-specific files.
+Contracts require a somewhat complicated directory structure. The easiest way to create it is to use
+`truffle init`.
 
 1. Create a new directory and unbox the MetaCoin project there
 ```
 mkdir workdir
 cd workdir
-truffle unbox metacoin
+truffle init
 ```
-2. Delete the project-specific files.
-```
-rm contracts/MetaCoin.sol
-rm migrations/2_deploy_contracts.js
-rm test/*
-```
-3. Edit `truffle-config.js`. Uncomment the network definition and change the port to 8545 (the default port 
+2. Edit `truffle-config.js`. Uncomment the network definition and change the port to 8545 (the default port 
 for `ganache-cli`). The edited file should include these lines. You can keep the test network or remove it.
 ```javascript
 module.exports = {
@@ -265,7 +259,27 @@ account, and paste your address.
 
 Edit the project's truffle configuration file (`truffle-config.js`, although it can also be `truffle.js`).
 
+At the top of the file configure the package you use to communicate, the Kovan URL, and the twelve word mnemonic that lets
+truffle know your private key:
+
+```javascript
+var Provider = require('truffle-hdwallet-provider');
+var mnemonic = '<your value goes here>';
+var kovanUrl = "https://kovan.infura.io/v3/c3422181d0594697a38defe7706a1e5b";
+```
+
+Within the `networks` definition add another network (and remember to add a comma between network definitions):
+
+```javascript
+    kovan: {
+      provider: () => new Provider(mnemonic, kovanUrl),
+      network_id: 42
+    }
+```
+
 ### Deploy and Test
+
+
 
 ## Web User Interface
 
