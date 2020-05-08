@@ -377,47 +377,31 @@ you might be trying to steal information from them.
 You can [see the full HTML file here](https://github.com/qbzzt/etherdocs/blob/master/startingout/counter.html). 
 I am only going to explain the parts that are Ethereum specific.
 
+There are several libraries that handle most of the communication details for you. I chose to use 
+[`ethers.js`](https://docs.ethers.io/ethers.js/html/).
+
 ```html
 <script src="https://cdn.ethers.io/scripts/ethers-v4.min.js"
         charset="utf-8" type="text/javascript">
 </script>
+```
 
+This is the information we need about the contract, as explained above.
 
-<script>
+```javascript
 const counterData = {
    address: '0xB2086099f3b764a167B923A670bf8A7FbD46A1c6',
    abi: [
-    {
-      "anonymous": false,
-      "inputs": [
-        {
-          "indexed": false,
-          "internalType": "uint256",
-          "name": "",
-          "type": "uint256"
-        },
-        {
-          "indexed": false,
-          "internalType": "address",
-          "name": "",
-          "type": "address"
-        }
-      ],
-      "name": "Asked4Value",
-      "type": "event"
-    },
-    {
-      "constant": false,
-      "inputs": [],
-      "name": "increment",
-      "outputs": [],
-      "payable": false,
-      "stateMutability": "nonpayable",
-      "type": "function"
-    }
+      .
+      .
+      .
   ] // the ABI from Counter.json
 };  // counterData
+```
 
+The 
+
+```javascript
 const provider = new ethers.providers.Web3Provider(window.ethereum);
 
 const writeToDiv = (divName, text) => {
