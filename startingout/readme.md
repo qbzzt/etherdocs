@@ -332,7 +332,7 @@ typically provided by a web server.
 To access the contract we need two pieces of information:
 
 1. The address, which you already know how to retrieve.
-2. The ABI (application binary interface). You can get this information from `build/contracts/<contract>.json`.
+1. The ABI (application binary interface). You can get this information from `.../build/contracts/<contract>.json`.
 For example, here is the ABI for `Counter`:
 
 ```json
@@ -367,6 +367,15 @@ For example, here is the ABI for `Counter`:
     }
   ]
 ```
+
+### Write the User Interface
+
+The easiest way to write the user interface is to use JavaScript and HTML. This lets you create a static file so
+you won't have to do anything on the server side. This is important because you do not want your users to worry
+you might be trying to steal information from them.
+
+
+
 
 ## Conclusion
 
