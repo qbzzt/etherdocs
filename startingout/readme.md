@@ -378,7 +378,7 @@ You can [see the full HTML file here](https://github.com/qbzzt/etherdocs/blob/ma
 I am only going to explain the parts that are Ethereum specific.
 
 There are several libraries that handle most of the communication details for you. I chose to use 
-[`ethers.js`](https://docs.ethers.io/ethers.js/html/).
+[ethers.js](https://docs.ethers.io/ethers.js/html/).
 
 ```html
 <script src="https://cdn.ethers.io/scripts/ethers-v4.min.js"
@@ -408,40 +408,47 @@ const provider = new ethers.providers.Web3Provider(window.ethereum);
 ```
 
 ```javascript
-var incrementInvoked = 0;
-
 const increment = async () => {
+```
+
+
+```javascript
 	const contract = await new ethers.Contract(
 		counterData.address, counterData.abi,
 		provider.getSigner()
 	);
+```
 
-	incrementInvoked++;
-	writeToDiv("increment", `Increment #${incrementInvoked}`);
-
+```javascript
 	await window.ethereum.enable();
+```
 
+```javascript
 	const transaction = await contract.increment();
 	const sentTime = Date.now();
 	const hash = transaction.hash;
 	writeToDiv("increment", `Transaction hash: ${hash}`);
+```
 
+```javascript
 	const receipt = await provider.waitForTransaction(hash);
 	writeToDiv("increment", `Mined in block: ${receipt.blockNumber}`);
 	writeToDiv("increment", `Transaction time: ${(Date.now()-sentTime)/1000} seconds`);
 };   // increment
+```
 
-
-
+```javascript
 const getUpdates = async () => {
-	const dataLengthBits = 256;
-	const dataLengthHex = dataLengthBits/4;
+```
 
+```javascript
 	const contract = await new ethers.Contract(
 		counterData.address, counterData.abi,
 		provider
 	);
+```
 
+```javascript
 	contract.on(contract.interface.events.Asked4Value,
 		evt => {
 			writeToDiv("events", `Increment #${incrementInvoked}`);
@@ -454,28 +461,10 @@ const getUpdates = async () => {
 		}
 	);   // contract.on
 };   // getUpdates
+```
 
-
+```javascript
 getUpdates();
-
-
-</script>
-
-</head>
-
-<body>
-<h2>Counter Test App</h2>
-
-<button onClick="increment()">Increment</button>
-
-<h4>Increment results</h4>
-<div id="increment"></div>
-
-<h4>Events</h4>
-<div id="events"></div>
-
-</body>
-</html>
 ```
 
 
