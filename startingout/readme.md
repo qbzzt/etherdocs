@@ -297,8 +297,8 @@ If you know an existing contract's address, you can call it from truffle's conso
 ```
 
 For example, I created an instance of `Counter` and deployed it to the address `0xB2086099f3b764a167B923A670bf8A7FbD46A1c6`.
-Here is how you increment it from the truffle console. Note that you need to have a compiled version of `Counter`, or at
-least the ABI (application binary interface) from one.
+Here is how you increment it from the truffle console. Note that you need to have a compiled version of `Counter` to be able
+to do this.
 
 ```javascript
 (await Counter.at('0xB2086099f3b764a167B923A670bf8A7FbD46A1c6')).increment()
@@ -323,6 +323,50 @@ truffle test --network kovan
 
 
 ## Web User Interface
+
+Solidity contracts are backend constructs. For users to be able to use your [decentralized application (dapp)](https://www.coindesk.com/learn/ethereum-101/what-is-a-decentralized-application-dapp) they need a front end they could access,
+typically provided by a web server. 
+
+### Contract Information
+
+To access the contract we need two pieces of information:
+
+1. The address, which you already know how to retrieve.
+2. The ABI (application binary interface). You can get this information from `build/contracts/<contract>.json`.
+For example, here is the ABI for `Counter`:
+
+```json
+ [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "Asked4Value",
+      "type": "event"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "increment",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ]
+```
 
 ## Conclusion
 
