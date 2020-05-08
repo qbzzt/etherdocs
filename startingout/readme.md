@@ -399,16 +399,15 @@ const counterData = {
 };  // counterData
 ```
 
-The 
+To interact with Ethereum we use a provider. The standard is for the wallet software (such as MetaMask) to expose the a
+`Web3Provider` in `window.ethereum`. The ethers.js library uses a different provider object, so we create an 
+ethers.js provider out of the one we got from the wallet.
 
 ```javascript
 const provider = new ethers.providers.Web3Provider(window.ethereum);
+```
 
-const writeToDiv = (divName, text) => {
-	document.getElementById(divName).innerHTML += `${text}<br>`;
-};   // writeToDiv
-
-
+```javascript
 var incrementInvoked = 0;
 
 const increment = async () => {
