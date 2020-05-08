@@ -1,4 +1,5 @@
 # Getting Started with Ethereum Development
+### Ori Pomerantz (qbzzt1@gmail.com)
 
 This tutorial teaches you how to get started with Ethereum development. While it explains certain features 
 of the Solidity programming language, it does not go into it in depth. For that I recommend 
@@ -112,7 +113,7 @@ ganache-cli -v
 ```
 truffle compile
 ```
-3. Connect to the Ganache network you are running locally:
+3. Connect to the Ganache network you are running locally. The `development` network is the default:
 ```
 truffle console --network development
 ```
