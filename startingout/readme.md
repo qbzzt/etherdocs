@@ -415,6 +415,14 @@ which doesn't block the JavaScript interpreted process.
 const increment = async () => {
 ```
 
+This call asks the wallet to get permission from the user to provide account information to the JavaScript code.
+The user can then select what account and network to use.
+
+```javascript
+	await window.ethereum.enable();
+```
+
+
 This `Contract` object is used to communicate with the contract on the blockchain. The address and ABI fields are the 
 contract information.
 
@@ -433,11 +441,8 @@ or one of the competing crypto wallets).
 	);
 ```
 
-This call enables the wallet to communicate with the user.
-
-```javascript
-	await window.ethereum.enable();
-```
+Create and send the transaction that goes on the ethereum network. The wallet is going to ask the user for confirmation,
+because transactions cost ether and on the real network that would be real money.
 
 ```javascript
 	const transaction = await contract.increment();
@@ -445,6 +450,9 @@ This call enables the wallet to communicate with the user.
 	const hash = transaction.hash;
 	writeToDiv("increment", `Transaction hash: ${hash}`);
 ```
+
+Wait for the transaction to actually happen on the blockchain. This can take 30 seconds on Kovan. Once the transaction happens,
+write the block number and the time it took.
 
 ```javascript
 	const receipt = await provider.waitForTransaction(hash);
