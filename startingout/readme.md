@@ -414,7 +414,9 @@ const provider = new ethers.providers.Web3Provider(window.ethereum);
 
 This function calls the contract to increment the stored value. Calling the blockchain is a slow process,
 so this is [an `async` function](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Async_await), 
-which doesn't block the JavaScript interpreted process.
+which doesn't block the JavaScript interpreted process. 
+
+This function is called from a button ib the HTML.
 
 ```javascript
 const increment = async () => {
@@ -469,14 +471,15 @@ write the block number and the time it took.
 #### Listen to Events
 
 This function listens to `Asked4Value` events. It is not as slow as `increment` above, but it still has some slow processes,
-so it is also asynchronous.
+so it is also asynchronous. It is called by the script.
 
 ```javascript
 const getUpdates = async () => {
 ```
 
 We also need a `Contract` object to listen to events. However, read-only actions, such as listening to events, are free. There
-is no need for a signer, just use the `Provider` object.
+is no need for a signer, so we can just use the `Provider` object. We could have also used the signer we used in the
+previous function.
 
 ```javascript
 	const contract = await new ethers.Contract(
@@ -485,12 +488,23 @@ is no need for a signer, just use the `Provider` object.
 	);
 ```
 
-
+The `contract.on` function take two parameters: a filter, and a function to call every time an event that matches the 
+filter happens. In `contract.interface.events` you can find filters for all the events in the ABI.
 
 ```javascript
 	contract.on(contract.interface.events.Asked4Value,
 		evt => {
+```
+This is the increment value at the time the event is received. It may or may not match the value when the transaction
+was sent. 
+
+```javascript
 			writeToDiv("events", `Increment #${incrementInvoked}`);
+```			
+
+We know about the event 
+
+```javascript
 			writeToDiv("events", `Got an event: ${JSON.stringify(evt)}`);
 			writeToDiv("events", 
 				`Counter value: ${
