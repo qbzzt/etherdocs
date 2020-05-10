@@ -380,6 +380,8 @@ I am only going to explain the parts that are Ethereum specific.
 There are several libraries that handle most of the communication details for you. I chose to use 
 [ethers.js](https://docs.ethers.io/ethers.js/html/).
 
+#### Setup
+
 ```html
 <script src="https://cdn.ethers.io/scripts/ethers-v4.min.js"
         charset="utf-8" type="text/javascript">
@@ -406,6 +408,9 @@ ethers.js provider out of the one we got from the wallet.
 ```javascript
 const provider = new ethers.providers.Web3Provider(window.ethereum);
 ```
+
+#### Send a Transaction
+
 
 This function calls the contract to increment the stored value. Calling the blockchain is a slow process,
 so this is [an `async` function](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Async_await), 
@@ -461,9 +466,17 @@ write the block number and the time it took.
 };   // increment
 ```
 
+#### Listen to Events
+
+This function listens to `Asked4Value` events. It is not as slow as `increment` above, but it still has some slow processes,
+so it is also asynchronous.
+
 ```javascript
 const getUpdates = async () => {
 ```
+
+We also need a `Contract` object to listen to events. However, read-only actions, such as listening to events, are free. There
+is no need for a signer, just use the `Provider` object.
 
 ```javascript
 	const contract = await new ethers.Contract(
@@ -471,6 +484,8 @@ const getUpdates = async () => {
 		provider
 	);
 ```
+
+
 
 ```javascript
 	contract.on(contract.interface.events.Asked4Value,
@@ -485,9 +500,7 @@ const getUpdates = async () => {
 		}
 	);   // contract.on
 };   // getUpdates
-```
 
-```javascript
 getUpdates();
 ```
 
