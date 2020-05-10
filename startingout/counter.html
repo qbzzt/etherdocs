@@ -53,6 +53,8 @@ const writeToDiv = (divName, text) => {
 var incrementInvoked = 0;
 
 const increment = async () => {
+	await window.ethereum.enable();
+
 	const contract = await new ethers.Contract(
 		counterData.address, counterData.abi,
 		provider.getSigner()
@@ -60,8 +62,6 @@ const increment = async () => {
 
 	incrementInvoked++;
 	writeToDiv("increment", `Increment #${incrementInvoked}`);
-
-	await window.ethereum.enable();
 
 	const transaction = await contract.increment();
 	const sentTime = Date.now();
