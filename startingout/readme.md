@@ -377,10 +377,13 @@ you might be trying to steal information from them.
 You can [see the full HTML file here](https://github.com/qbzzt/etherdocs/blob/master/startingout/counter.html). 
 I am only going to explain the parts that are Ethereum specific.
 
-There are several libraries that handle most of the communication details for you. I chose to use 
-[ethers.js](https://docs.ethers.io/ethers.js/html/).
+Note that for security reasons you cannot access MetaMask when you open a file locally, so you'll need to
+use a web server and browse to it.
 
 #### Setup
+
+There are several libraries that handle most of the communication details for you. I chose to use 
+[ethers.js](https://docs.ethers.io/ethers.js/html/).
 
 ```html
 <script src="https://cdn.ethers.io/scripts/ethers-v4.min.js"
@@ -475,6 +478,8 @@ so it is also asynchronous. It is called by the script.
 
 ```javascript
 const getUpdates = async () => {
+	const dataLengthBits = 256;
+	const dataLengthHex = dataLengthBits/4;
 ```
 
 We also need a `Contract` object to listen to events. However, read-only actions, such as listening to events, are free. There
@@ -496,21 +501,27 @@ filter happens. In `contract.interface.events` you can find filters for all the 
 		evt => {
 ```
 This is the increment value at the time the event is received. It may or may not match the value when the transaction
-was sent. 
+was sent.
 
 ```javascript
 			writeToDiv("events", `Increment #${incrementInvoked}`);
-```			
+```
 
-We know about the event 
+The information we know about the event come from `evt`, 
+[an `Event` object](https://docs.ethers.io/ethers.js/html/api-contract.html#event-object). 
 
 ```javascript
 			writeToDiv("events", `Got an event: ${JSON.stringify(evt)}`);
+```
+
+The `evt` variable contains a field, `data`, with the parameters to the event. Those parameters are a `uint` (a 256
+bit unsigned integer) and an `address`. To get only the first parameter (and the `0x` prefix that marks the number
+as hexadecimal), we look only at the first few characters. The `parseInt` function then turns the string into a 
+number we can display as a decimal number.
+
+```javascript
 			writeToDiv("events", 
-				`Counter value: ${
-					parseInt(evt.data.substring(0, dataLengthHex+2))
-				}`
-			);
+				`Counter value: ${parseInt(evt.data.substring(0, dataLengthHex+2))}`);
 		}
 	);   // contract.on
 };   // getUpdates
@@ -523,6 +534,7 @@ getUpdates();
 
 ## Conclusion
 
+Hopefully at this point you know enough to get started with decentralized applications (dapps) and where to search
+for additional information.
 
-[//] Inform Lou Said on Facebook when ready
 
