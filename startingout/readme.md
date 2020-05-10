@@ -407,17 +407,33 @@ ethers.js provider out of the one we got from the wallet.
 const provider = new ethers.providers.Web3Provider(window.ethereum);
 ```
 
+This function calls the contract to increment the stored value. Calling the blockchain is a slow process,
+so this is [an `async` function](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Async_await), 
+which doesn't block the JavaScript interpreted process.
+
 ```javascript
 const increment = async () => {
 ```
 
+This `Contract` object is used to communicate with the contract on the blockchain. The address and ABI fields are the 
+contract information.
 
 ```javascript
 	const contract = await new ethers.Contract(
 		counterData.address, counterData.abi,
+		
+```
+
+To send messages to the contract you need to have an identity with [ether](https://ethereum.org/eth/#what-is-ether-eth) to pay
+for processing and sign the transaction. Use `provider.getSigner()` to get the current signer identity from the wallet (MetaMask
+or one of the competing crypto wallets). 
+
+```javascript
 		provider.getSigner()
 	);
 ```
+
+This call enables the wallet to communicate with the user.
 
 ```javascript
 	await window.ethereum.enable();
