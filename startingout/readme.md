@@ -464,7 +464,8 @@ write the block number and the time it took.
 ```javascript
 	const receipt = await provider.waitForTransaction(hash);
 	writeToDiv("increment", `Mined in block: ${receipt.blockNumber}`);
-	writeToDiv("increment", `Transaction time: ${(Date.now()-sentTime)/1000} seconds`);
+	writeToDiv("increment", 
+		`Transaction time: ${(Date.now()-sentTime)/1000} seconds`);
 };   // increment
 ```
 
@@ -518,7 +519,7 @@ number we can display as a decimal.
 
 ```javascript
 			writeToDiv("events", 
-				`Counter value: ${parseInt(evt.data.substring(0, dataLengthHex+2))}`);
+			`Counter value: ${parseInt(evt.data.substring(0, dataLengthHex+2))}`);
 		}
 	);   // contract.on
 };   // getUpdates
