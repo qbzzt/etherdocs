@@ -142,7 +142,7 @@ JavaScript when a process can take a long time to avoid tying up the process
 
 ### Write Contract Tests
 
-It is very important to have automated tests to make sure your contract acts as it is supposed to. This is particularly
+It is important to have automated tests to make sure your program acts as it is supposed to. This is particularly
 important in a dapp, because once a contract is deployed it is immutable. It cannot be fixed, it is going to stay in the 
 blockchain forever.
 
@@ -150,7 +150,7 @@ The tests are based on [Mocha](https://mochajs.org/) and [Chai](https://www.chai
 beyond the very basic tests here, 
 [see the Truffle documentation](https://www.trufflesuite.com/docs/truffle/testing/writing-tests-in-javascript). 
 
-Tests are supposed to go in `.../test`, and are typically written in JavaScript (you can also write them in Solidity, 
+Tests are supposed to go in the `test` directory, and are typically written in JavaScript (you can also write them in Solidity, 
 [see here](https://www.trufflesuite.com/docs/truffle/testing/writing-tests-in-solidity). Here is `test/counter.js`, 
 which contains a number of tests for the `Counter` contract. To get just the file without the comments, 
 [see here](https://github.com/qbzzt/etherdocs/blob/master/startingout/counter.js).
