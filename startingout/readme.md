@@ -17,6 +17,8 @@ The command to install them on versions of Linux that are based on Debian, such 
 ```
 sudo apt install npm
 ```
+If you are using another distribution, read the documentation for your distribution.
+
 2. Install [the truffle development environment](https://www.trufflesuite.com/docs/truffle/overview) and 
 [the ganache blockchain simulator](https://www.trufflesuite.com/ganache). The `-g` parameter declares that this 
 package is to be installed globally, for all users of this computer. That requires root privileges.
