@@ -255,8 +255,8 @@ to the test network.
 
 To deploy a contract you need gas, which you need to buy with ether. Luckily, the Kovan network lets you get ether for free:
 1. Get your account address. It appears in MetaMask under the network you're using. Click it to copy to the clipboard.
-1. If you do not have a GitHub account, [get one here](https://github.com/join). 
 1. [Click here](https://faucet.kovan.network/), log on using your GitHub account, and paste your address. 
+If you do not have a GitHub account, [get one here](https://github.com/join). 
 
 #### Truffle Configuration
 
