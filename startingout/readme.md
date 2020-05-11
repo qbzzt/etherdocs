@@ -524,7 +524,9 @@ number we can display as a decimal.
 
 ```javascript
 			writeToDiv("events", 
-			`Counter value: ${parseInt(evt.data.substring(0, dataLengthHex+2))}`);
+			`Counter value: ${
+				parseInt(evt.data.substring(0, 
+					dataLengthHex+2))}`);
 		}
 	);   // contract.on
 };   // getUpdates
