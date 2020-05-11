@@ -333,7 +333,7 @@ typically provided by a web server.
 To access the contract we need two pieces of information:
 
 1. The address, which you already know how to retrieve.
-1. The ABI (application binary interface). You can get this information from `.../build/contracts/<contract>.json`.
+1. The ABI (application binary interface). You can get this information from `build/contracts/<contract>.json`.
 For example, here is the ABI for `Counter`:
 
 ```json
