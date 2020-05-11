@@ -35,7 +35,8 @@ With the environment set up, you can create a contract.
 Contracts require a somewhat complicated directory structure. The easiest way to create it is to use
 `truffle init`.
 
-1. Create a new directory and unbox the MetaCoin project there
+1. Create a new directory and initialize truffle. You also need to install `@truffle/hdwallet-provider`,
+which you will use later to deploy the contract to a test network.
 ```
 mkdir workdir
 cd workdir
