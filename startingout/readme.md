@@ -260,7 +260,7 @@ If you do not have a GitHub account, [get one here](https://github.com/join).
 
 #### Truffle Configuration
 
-Edit the project's truffle configuration file (`truffle-config.js`, although it can also be `truffle.js`).
+Edit the project's truffle configuration file (by default `truffle-config.js`, although it can also be `truffle.js`).
 
 At the top of the file configure the package you use to communicate, the Kovan URL, and the twelve word mnemonic that lets
 truffle know your private key:
