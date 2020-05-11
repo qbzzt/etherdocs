@@ -242,7 +242,7 @@ but for the purpose of this tutorial I chose to use the [Kovan network](https://
 To interact with a network you an account (a public/private key pair). The easiest way to set one up is to use a wallet such as
 the [MetaMask](https://metamask.io/) browser extension for Chrome. It takes you through the process of creating an account.
 
-Note that this is a testing account. You may use the twelve word pass phrase for this account in your source code,
+Note that this is a testing account. You may use the twelve word mnemonic for this account in your source code,
 source code you may commit to a public repository. Do **not** use the same account to hold actual assets. 
 
 ### Kovan
