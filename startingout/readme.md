@@ -195,7 +195,8 @@ emitted is in an array called `returnValues`.
 
 ```javascript
                 const retVal = events[0].returnValues[0];
-                assert.equal(retVal, 1, "The first increment didn't return one");
+                assert.equal(retVal, 1, 
+			"The first increment didn't return one");
         });   // it should return one after incrementing once
 ```
 
@@ -221,7 +222,8 @@ to wait until a transaction is done before starting up the next one.
                 await Promise.all(arr);
 
                 retVal = (await counter.getPastEvents())[0].returnValues[0];
-                assert.equal(retVal, n, `${n} increments didn't return ${n}`);
+                assert.equal(retVal, n, 
+			`${n} increments didn't return ${n}`);
         });   // it should return n after incrementing n times
 
 });
@@ -302,7 +304,8 @@ from truffle's console mode. For example, I created an instance of `Counter` and
 increment it:
 
 ```javascript
-contract = await Counter.at('0xB2086099f3b764a167B923A670bf8A7FbD46A1c6')
+contract = await Counter.at(
+	'0xB2086099f3b764a167B923A670bf8A7FbD46A1c6')
 await contract.increment()
 ```
 
