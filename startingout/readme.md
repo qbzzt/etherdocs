@@ -405,8 +405,8 @@ const counterData = {
 };  // counterData
 ```
 
-To interact with Ethereum we use a provider. The standard is for the wallet software (such as MetaMask) to expose the a
-`Web3Provider` in `window.ethereum`. The ethers.js library uses a different provider object, so we create an 
+To interact with Ethereum we use a provider. The standard is for the wallet software (such as MetaMask) to expose a
+`Web3Provider` object in `window.ethereum`. The ethers.js library uses a different provider object, so we create an 
 ethers.js provider out of the one we got from the wallet.
 
 ```javascript
@@ -416,11 +416,7 @@ const provider = new ethers.providers.Web3Provider(window.ethereum);
 #### Send a Transaction
 
 
-This function calls the contract to increment the stored value. Calling the blockchain is a slow process,
-so this is [an `async` function](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Async_await), 
-which doesn't block the JavaScript interpreted process. 
-
-This function is called from a button ib the HTML.
+This function calls the contract to increment the stored value. It is called from a button in the HTML.
 
 ```javascript
 const increment = async () => {
@@ -445,7 +441,7 @@ contract information.
 
 To send messages to the contract you need to have an identity with [ether](https://ethereum.org/eth/#what-is-ether-eth) to pay
 for processing and sign the transaction. Use `provider.getSigner()` to get the current signer identity from the wallet (MetaMask
-or one of the competing crypto wallets). 
+or any other crypto wallet). 
 
 ```javascript
 		provider.getSigner()
@@ -475,7 +471,7 @@ write the block number and the time it took.
 #### Listen to Events
 
 This function listens to `Asked4Value` events. It is not as slow as `increment` above, but it still has some slow processes,
-so it is also asynchronous. It is called by the script.
+so it is also asynchronous. It is called by the script itself, so it is run during the page load process.
 
 ```javascript
 const getUpdates = async () => {
@@ -484,8 +480,8 @@ const getUpdates = async () => {
 ```
 
 We also need a `Contract` object to listen to events. However, read-only actions, such as listening to events, are free. There
-is no need for a signer, so we can just use the `Provider` object. We could have also used the signer we used in the
-previous function.
+is no need for a signer, so we can just use the `Provider` object (we could have also used the signer we used in the
+previous function).
 
 ```javascript
 	const contract = await new ethers.Contract(
@@ -501,9 +497,9 @@ filter happens. In `contract.interface.events` you can find filters for all the 
 	contract.on(contract.interface.events.Asked4Value,
 		evt => {
 ```
+
 This is the increment value at the time the event is received. It may or may not match the value when the transaction
 was sent.
-
 ```javascript
 			writeToDiv("events", `Increment #${incrementInvoked}`);
 ```
@@ -518,7 +514,7 @@ The information we know about the event come from `evt`,
 The `evt` variable contains a field, `data`, with the parameters to the event. Those parameters are a `uint` (a 256
 bit unsigned integer) and an `address`. To get only the first parameter (and the `0x` prefix that marks the number
 as hexadecimal), we look only at the first few characters. The `parseInt` function then turns the string into a 
-number we can display as a decimal number.
+number we can display as a decimal.
 
 ```javascript
 			writeToDiv("events", 
