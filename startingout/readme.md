@@ -325,7 +325,7 @@ truffle test --network kovan
 
 ## Web User Interface
 
-Solidity contracts are backend constructs. For users to be able to use your [decentralized application (dapp)](https://www.coindesk.com/learn/ethereum-101/what-is-a-decentralized-application-dapp) they need a front end they could access,
+Solidity contracts are backend constructs. For users to be able to use [a decentralized application (dapp)](https://www.coindesk.com/learn/ethereum-101/what-is-a-decentralized-application-dapp) they need a front end they could access,
 typically provided by a web server. 
 
 ### Contract Information
