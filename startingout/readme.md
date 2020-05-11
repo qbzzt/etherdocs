@@ -378,8 +378,8 @@ you might be trying to steal information from them.
 You can [see the full HTML file here](https://github.com/qbzzt/etherdocs/blob/master/startingout/counter.html). 
 I am only going to explain the parts that are Ethereum specific.
 
-Note that for security reasons you cannot access MetaMask when you open a file locally, so you'll need to
-use a web server and browse to it.
+Note that for security reasons you cannot access MetaMask when you open a file locally, so you'll need to 
+browse to it off of a web server.
 
 #### Setup
 
