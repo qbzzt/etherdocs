@@ -12,8 +12,8 @@ you are using Windows,
 
 ## Set up the Environment
 
-1. The software we use is based on `npm`, the [Node.js Package Manager](https://www.npmjs.com/). The 
-command to do this on versions of Linux that are based on Debian, such as Ubuntu, is:
+1. The software we use is based on `npm`, the [Node.js Package Manager](https://www.npmjs.com/), and Node.js. 
+The command to install them on versions of Linux that are based on Debian, such as Ubuntu, is:
 ```
 sudo apt install npm
 ```
