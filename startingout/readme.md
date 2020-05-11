@@ -297,16 +297,19 @@ contract.address
 ```
 
 
-**Note:** If you know an existing contract's address, you can call it from truffle's console mode. For example, I created an 
-instance of `Counter` and deployed it to the address `0xB2086099f3b764a167B923A670bf8A7FbD46A1c6`. Here is how you 
-can get to the contract for that deployment.
+**Note:** If you know an existing contract's address, and you have the compiled version for it, you can use the contract 
+from truffle's console mode. For example, I created an instance of `Counter` and deployed it to the address `0xB2086099f3b764a167B923A670bf8A7FbD46A1c6`. Here is how you can get to the contract for that deployment and then
+increment it:
 
 ```javascript
 contract = await Counter.at('0xB2086099f3b764a167B923A670bf8A7FbD46A1c6')
+await contract.increment()
 ```
 
-3. To increment the counter and get the result you run this code in the truffle console. Note that calling the blockchain
-is a slow process taht requires `await`.
+
+
+3. To increment the counter and get the result you run this code in the truffle console. Calling the blockchain
+is a slow process that requires `await`.
 ```javascript
 results = await contract.increment()
 results.logs[0].args[0].toString()
