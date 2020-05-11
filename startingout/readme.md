@@ -190,8 +190,8 @@ This is how you get a record of the events emitted by a contract.
                 const events = await counter.getPastEvents();
 ```              
 
-The last event emitted by the contract is `events[0]`. The information emitted is in an
-array called `returnValues`. 
+When a contract emits just one event for a transaction, that event is available in `events[0]`. The information 
+emitted is in an array called `returnValues`. 
 
 ```javascript
                 const retVal = events[0].returnValues[0];
