@@ -502,14 +502,16 @@ filter happens. In `contract.interface.events` you can find filters for all the 
 This is the increment value at the time the event is received. It may or may not match the value when the transaction
 was sent.
 ```javascript
-			writeToDiv("events", `Increment #${incrementInvoked}`);
+			writeToDiv("events", 
+				`Increment #${incrementInvoked}`);
 ```
 
 The information we know about the event come from `evt`, 
 [an `Event` object](https://docs.ethers.io/ethers.js/html/api-contract.html#event-object). 
 
 ```javascript
-			writeToDiv("events", `Got an event: ${JSON.stringify(evt)}`);
+			writeToDiv("events", 
+				`Got an event: ${JSON.stringify(evt)}`);
 ```
 
 The `evt` variable contains a field, `data`, with the parameters to the event. Those parameters are a `uint` (a 256
