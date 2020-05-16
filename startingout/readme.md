@@ -12,12 +12,8 @@ you are using Windows,
 
 ## Set up the Environment
 
-1. The software we use is based on `npm`, the [Node.js Package Manager](https://www.npmjs.com/), and Node.js. 
-The command to install them on versions of Linux that are based on Debian, such as Ubuntu, is:
-```
-sudo apt install npm
-```
-If you are using another distribution, read the documentation for your distribution.
+1. The software we use is based on `npm`, the [Node.js Package Manager](https://www.npmjs.com/), and Node.js.
+You can [download them from here](https://nodejs.org/en/download/). 
 
 2. Install [the truffle development environment](https://www.trufflesuite.com/docs/truffle/overview) and 
 [the ganache blockchain simulator](https://www.trufflesuite.com/ganache). The `-g` parameter declares that this 
