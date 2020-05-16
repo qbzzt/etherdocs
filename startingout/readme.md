@@ -56,7 +56,7 @@ module.exports = {
 ### Write the Contract
 
 Write the contract in the `contracts` directory. Here is a simple contract [(you can get the source code without the 
-explanatory text here)](https://github.com/qbzzt/etherdocs/blob/master/startingout/Counter.sol). For the rest of the 
+explanatory text here)](https://raw.githubusercontent.com/qbzzt/etherdocs/master/startingout/Counter.sol). For the rest of the 
 tutorial, I am going to assume this is the contract you're using, and that it is stored in `contracts/Counter.sol`.
 
 This line specifies the acceptable versions of the Solidity programming language. In this case we only allow 
