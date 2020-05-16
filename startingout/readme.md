@@ -112,7 +112,8 @@ ganache-cli -v
 ```
 truffle compile
 ```
-3. Connect to the Ganache network you are running locally. The `development` network is the default:
+3. Connect to the Ganache network you are running locally. The `development` network is the default, so 
+`--network development` is optional.
 ```
 truffle console --network development
 ```
