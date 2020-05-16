@@ -375,7 +375,7 @@ The easiest way to write the user interface is to use JavaScript and HTML. This 
 you won't have to do anything on the server side. This is important because you do not want your users to worry
 you might be trying to steal information from them.
 
-You can [see the full HTML file here](https://github.com/qbzzt/etherdocs/blob/master/startingout/counter.html). 
+You can [see the full HTML file here](https://raw.githubusercontent.com/qbzzt/etherdocs/master/startingout/counter.html). 
 I am only going to explain the parts that are Ethereum specific.
 
 Note that for security reasons you cannot access MetaMask when you open a file locally, so you'll need to 
