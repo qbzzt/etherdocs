@@ -316,7 +316,7 @@ results.logs[0].args[0].toString()
 ```
 
 4. If you want to run your automated tests on Kovan you can do that, but it is slow and expensive, and tests could
-fail due to a timeout. The tests in `counter.js` cost me 0.0153 Ether (which luckily is free on Kovan) and about
+fail due to a timeout. The tests in `counter.js` cost me 0.0153 Ether (which luckily is free on Kovan) and took about
 52 seconds.
 ```bash
 truffle test --network kovan
