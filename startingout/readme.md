@@ -150,7 +150,7 @@ beyond the very basic tests here,
 Tests are supposed to go in the `test` directory, and are typically written in JavaScript (you can also write them in Solidity, 
 [see here](https://www.trufflesuite.com/docs/truffle/testing/writing-tests-in-solidity)). This is `test/counter.js`, 
 which contains a number of tests for the `Counter` contract. To get just the file without the comments, 
-[click here](https://github.com/qbzzt/etherdocs/blob/master/startingout/counter.js).
+[click here](https://raw.githubusercontent.com/qbzzt/etherdocs/master/startingout/counter.js).
 
 
 We need information about the contract to test it.
