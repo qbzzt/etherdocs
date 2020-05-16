@@ -12,7 +12,7 @@ you are using Windows,
 
 ## Set up the Environment
 
-1. The software we use is based on `npm`, the [Node.js Package Manager](https://www.npmjs.com/), and Node.js.
+1. The software we use is based on `npm` (the [Node.js Package Manager](https://www.npmjs.com/)) and Node.js.
 You can [download them from here](https://nodejs.org/en/download/). 
 
 2. Install [the truffle development environment](https://www.trufflesuite.com/docs/truffle/overview) and 
