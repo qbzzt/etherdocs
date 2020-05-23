@@ -75,12 +75,13 @@ so by convention it starts by `0x`.
 	$scope.entropy = '0x';
 ```
 
-Add a hexadecimal digit to `$scope.entropy`. 
+The function `$scope.addHex` adds a hexadecimal digit to `$scope.entropy`. 
 ```
 	$scope.getHex = () => "0123456789abcdef"[Date.now() % 16]
  	$scope.addHex = () => $scope.entropy += $scope.getHex();
 ```
-d
+
+For us to have enough entropy, the 
 ```
 	$scope.entropyLeft = () => 33-$scope.entropy.length;
 
