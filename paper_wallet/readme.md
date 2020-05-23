@@ -19,15 +19,27 @@ while I hope it is a useful tool, there is no warranty, express or implied. *Use
 
 Here is a partial list of failure modes.
 
-1. You lose the mnemonic. Those twelve words are the only way to transfer funds out of the account. If you lose them, you can
+1. **Lost mnemomic**. Those twelve words are the only way to transfer funds out of the account. If you lose them, you can
 still gaze upon the balance in your account, but you will not be able to get to it.
-1. Somebody else gets the mnemonic. This is the mirror image of the previous failure mode. **Anybody** with the mnemonic can
+1. **Disclosed mnemonic**. This is the mirror image of the previous failure mode. **Anybody** with the mnemonic can
 get your funds. If you think it may have been disclosed, it is best to create a new one and address 
 and immediately transfer everything.
-1. Somebody can force you to disclose the mnemonic. For example, if you try to use this to avoid paying income taxes, the
+1. **Forced disclosure**. For example, if you try to use this to avoid paying income taxes, the
 tax authorities can prosecute you for tax evasion and throw you in jail until you pay them what they think you owe. Remember
 that the people who pay you know your address, and that anybody with that knowledge can go to 
 `https://etherscan.io/address/ <address>` and see the balance it holds.
+1. **Stealth disclosure**. Even a computer that isn't connected to any network 
+[sends off radio frequency signals](https://www.cl.cam.ac.uk/~mgk25/pet2004-fpd.pdf). If somebody receives those signals,
+they can decode what you see on your screen when you generate the mnemonic and address. If you are tring to keep a secret
+from the NSA, you probbly need to [get special computers](https://en.wikipedia.org/wiki/Tempest_(codename)). 
+
+## The Tools
+
+In addition to the standard HTML and Javascript, the web page uses these tools:
+
+1. [Bootstrap](https://www.w3schools.com/bootstrap/default.asp) for the look and feel.
+1. [Angular](https://www.w3schools.com/angular/default.asp) for interaction between Javascript code and the user.
+1. 
 
 
 ## Conclusion
