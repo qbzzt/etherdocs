@@ -2,7 +2,7 @@
 
 ## Ori Pomerantz (qbzzt1@gmail.com)
 
-[This HTML file](https://github.com/qbzzt/etherdocs/blob/master/paper_wallet/get_address.html) lets you
+[This HTML file](https://qbzzt.github.io/ethereum/paper_wallet.html) lets you
 create an Ethereum address offline on a device not connected to the Internet. If you then store the mnemonic 
 (the twelve words) in a safe place, on a piece of paper, you can receive paymennts to the corresponding address. 
 Your account is as safe as that piece of paper, without any risk of your funds being stolen, until you are ready to 
