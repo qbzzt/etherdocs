@@ -64,4 +64,34 @@ because humans don't have the ability to time their clicks that accurately. Each
 The calculation we use to figure out the mnemonic and address requires over 120 bits of randomness, so we need over thirty
 clicks.
 
+## The Code
+
+This is the code that does the actual work:
+
+First we initialize the entropy to be empty. The entropy is an [hexadecimal number](https://en.wikipedia.org/wiki/Hexadecimal),
+so by convention it starts by `0x`. 
+
+```
+	$scope.entropy = '0x';
+```
+
+Add a hexadecimal digit to `$scope.entropy`. 
+```
+	$scope.getHex = () => "0123456789abcdef"[Date.now() % 16]
+ 	$scope.addHex = () => $scope.entropy += $scope.getHex();
+```
+d
+```
+	$scope.entropyLeft = () => 33-$scope.entropy.length;
+
+	$scope.getMnemonic = () => $scope.entropyLeft() == 0 ? 
+		ethers.utils.HDNode.entropyToMnemonic($scope.entropy) : "";
+
+	$scope.getAddr = () => $scope.entropyLeft() == 0 ? 
+		ethers.utils.HDNode.fromMnemonic(
+			ethers.utils.HDNode.entropyToMnemonic($scope.entropy)
+		).derivePath("m/44'/60'/0'/0/0").address : "";
+```
+
+
 ## Conclusion
