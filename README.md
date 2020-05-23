@@ -1,6 +1,7 @@
-# etherdocs
+# Ether Docs
+## Ori Pomerantz, qbzzt1@gmail.com
 
-Various tutorials about Etherdocs I've written.
+Various tutorials about the [Ethereum](https://ethereum.org/) ecosystem I've written.
 
 1. [Getting Started with Ethereum Development](https://github.com/qbzzt/etherdocs/tree/master/startingout). This article is 
 for programmers who want to write a decentralized app and don't know where to start.
