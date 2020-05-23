@@ -81,10 +81,14 @@ The function `$scope.addHex` adds a hexadecimal digit to `$scope.entropy`.
  	$scope.addHex = () => $scope.entropy += $scope.getHex();
 ```
 
-For us to have enough entropy, the 
+For us to have enough entropy, we need 31 hexadecimal digits. But the string is 33 characters long with the `0x` prefix.
 ```
 	$scope.entropyLeft = () => 33-$scope.entropy.length;
+```
 
+Once we have enough entropy we can use [`ethers.utils.HDNode.entropyToMnemonic`
+](https://docs.ethers.io/ethers.js/html/api-advanced.html#static-methods) to 
+```
 	$scope.getMnemonic = () => $scope.entropyLeft() == 0 ? 
 		ethers.utils.HDNode.entropyToMnemonic($scope.entropy) : "";
 
