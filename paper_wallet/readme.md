@@ -39,7 +39,29 @@ In addition to the standard HTML and Javascript, the web page uses these tools:
 
 1. [Bootstrap](https://www.w3schools.com/bootstrap/default.asp) for the look and feel.
 1. [Angular](https://www.w3schools.com/angular/default.asp) for interaction between Javascript code and the user.
-1. 
+1. [Ethers.js](https://docs.ethers.io/ethers.js/html/) for Ethereum functionalty.
 
+The first two are well known and mainstream, so my explanations will focus on Ethers.js.
+
+
+## Usage
+
+Click the button multiple times to collect [entropy](https://en.wikipedia.org/wiki/Entropy_(computing)). Once you have clicked
+it 31 times there is enough randomness to produce the mnemonic, and from it the public address (as well as the private key 
+and other required information). These values are automatically displayed for you once they are available.
+
+### Why the Clicking? Can't you Automate That?
+
+Computers are deterministic. If you and I run the same program and give it the same input, we should receive the same results.
+This is almost always the desired behavior. However, if you are creating a private key that I shouldn't know (for example, the
+mnemonic here) the last thing you want is for me to go through the same process and get the same result. Therefore, you need 
+some kind of random value I would not be able to guess.
+
+Every time you click the button the page takes the current time (in milliseconds since a fixed point, which is the standard
+JavaScript method of storing time), divides it by sixteen, and takes the reminder. This number (zero to fifteen) is random
+because humans don't have the ability to time their clicks that accurately. Each click gives us four bits of randomness.
+
+The calculation we use to figure out the mnemonic and address requires over 120 bits of randomness, so we need over thirty
+clicks.
 
 ## Conclusion
