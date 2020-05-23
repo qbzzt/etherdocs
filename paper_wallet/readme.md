@@ -2,7 +2,7 @@
 
 ## Ori Pomerantz (qbzzt1@gmail.com)
 
-[The HTML file in this directory](https://github.com/qbzzt/etherdocs/blob/master/paper_wallet/get_address.html) lets you
+[This HTML file](https://github.com/qbzzt/etherdocs/blob/master/paper_wallet/get_address.html) lets you
 create an Ethereum address offline on a device not connected to the Internet. If you then store the mnemonic 
 (the twelve words) in a safe place, on a piece of paper, you can receive paymennts to the corresponding address. 
 Your account is as safe as that piece of paper, without any risk of your funds being stolen, until you are ready to 
@@ -21,13 +21,13 @@ Here is a partial list of failure modes.
 
 1. You lose the mnemonic. Those twelve words are the only way to transfer funds out of the account. If you lose them, you can
 still gaze upon the balance in your account, but you will not be able to get to it.
-1. Somebody else gets the mnemonic. This is the mirror image of the previous failure mode. Anybody with that information can
-get your funds. If you think the mnemonic may have been disclosed, it is best to create a new mnemonic and address 
-and immediately transfer everything to that address.
+1. Somebody else gets the mnemonic. This is the mirror image of the previous failure mode. **Anybody** with the mnemonic can
+get your funds. If you think it may have been disclosed, it is best to create a new one and address 
+and immediately transfer everything.
 1. Somebody can force you to disclose the mnemonic. For example, if you try to use this to avoid paying income taxes, the
 tax authorities can prosecute you for tax evasion and throw you in jail until you pay them what they think you owe. Remember
-that the people who paay you know your address, and that anybody can go to `https://etherscan.io/address/ <address>` and see 
-the balance it holds.
+that the people who pay you know your address, and that anybody with that knowledge can go to 
+`https://etherscan.io/address/ <address>` and see the balance it holds.
 
 
 ## Conclusion
