@@ -41,7 +41,7 @@ In addition to the standard HTML and Javascript, the web page uses these tools:
 1. [Angular](https://www.w3schools.com/angular/default.asp) for interaction between Javascript code and the user.
 1. [Ethers.js](https://docs.ethers.io/ethers.js/html/) for Ethereum functionalty.
 
-The first two are well known and mainstream, so my explanations will focus on Ethers.js.
+The first two are mainstream and well known, so my explanations will focus on Ethers.js.
 
 
 ## Usage
@@ -103,6 +103,13 @@ organized as a tree. The
 [`ethers.utils.HDNode.fromMnemonic`](https://docs.ethers.io/ethers.js/html/api-advanced.html#static-methods)
 function creates the root of the tree from the mnemonic. 
 
+However, because the same tree can be used for multiple blockchains, we don't use the root node for our private and
+public keys. Instead, in Ethereum we use the `m/44'/60'/0'/0/0` branch for the first address. This is explained
+[here](https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki). The 
+[`derivePath`](https://docs.ethers.io/ethers.js/html/api-advanced.html#deriving-child-and-neutered-nodes) function 
+moves from the root node of the tree to that node. This node contains various fields, one of which is the address 
+that corresponds to the mnemonic.
+
 ```
 	$scope.getAddr = () => $scope.entropyLeft() == 0 ? 
 		ethers.utils.HDNode.fromMnemonic(
@@ -112,3 +119,6 @@ function creates the root of the tree from the mnemonic.
 
 
 ## Conclusion
+
+I hope that this tutorial helped you understand the purpose of paper wallets and how to create them. 
+Hopefully it also demystified a bit the blockchain logic used to create addresses in Ethereum.
