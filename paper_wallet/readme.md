@@ -4,7 +4,7 @@
 
 [This HTML file](https://qbzzt.github.io/ethereum/paper_wallet.html) lets you
 create an Ethereum address offline on a device not connected to the Internet. If you then store the mnemonic 
-(the twelve words) in a safe place, on a piece of paper, you can receive paymennts to the corresponding address. 
+(the twelve words) in a safe place, on a piece of paper, you can receive payments to the corresponding address. 
 Your account is as safe as that piece of paper, without any risk of your funds being stolen, until you are ready to 
 withdraw the funds. Only then do you need to put the private key on an Internet connected device and trust to the 
 security of that device. The window of opportunity to attack you is much shorter, making your funds a lot more secure.
