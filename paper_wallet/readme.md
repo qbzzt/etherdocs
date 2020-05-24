@@ -37,13 +37,13 @@ from the NSA, you probbly need to [get special computers](https://en.wikipedia.o
 ## Usage
 
 Click the button multiple times to collect [entropy](https://en.wikipedia.org/wiki/Entropy_(computing)). Once you have clicked
-it 31 times there is enough randomness to produce the mnemonic, and from it the public address (as well as the private key 
-and other required information). These values are automatically displayed for you once they are available.
+it thirty two times there is enough randomness to produce the mnemonic, and from it the public address. These values are 
+automatically displayed for you once they are available.
 
 Give the public address to anybody who wants to pay you or from whom you are going to transfer cryptocurrency (such as 
 [Coinbase](https://coinbase.com/)). When you are ready to use the account, you can use a wallet such as 
 [MetaMask](https://metamask.io/). Log out of the existing account if you have one (and have a backup of the twelve words
-for that account) and import a new account using a seed phrase (another name for the mnemonic).
+for that account) and import a new account using your mnemonic, also called the seed phrase.
 
 ### Why the Clicking? Can't you Automate That?
 
@@ -127,7 +127,7 @@ that corresponds to the mnemonic.
 		).derivePath("m/44'/60'/0'/0/0").address : "";
 ```
 
-### Warning: Don't Choose a Memorable Phrase
+### Warning: Don't Just Choose a Memorable Phrase
 
 It is tempting to select eleven words from [the list](https://github.com/bitcoin/bips/blob/master/bip-0039/english.txt)
 to create a memorable phrase, and then just add seven random bits to create the last word (which is not arbitrary because it 
