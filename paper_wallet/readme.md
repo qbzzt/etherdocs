@@ -6,7 +6,7 @@
 create an Ethereum address offline on a device not connected to the Internet. If you then store the mnemonic 
 (the twelve words) in a safe place, on a piece of paper, you can receive payments to the corresponding address. 
 Your account is as safe as that piece of paper, without any risk of your funds being stolen, until you are ready to 
-withdraw the funds. Only then do you need to put the private key on an Internet connected device and trust to the 
+withdraw the funds. Only then do you need to put the mmnemonic on an Internet connected device and trust to the 
 security of that device. The window of opportunity to attack you is much shorter, making your funds a lot more secure.
 
 This tutorial explains how the key generator works and why I *think* it is sufficiently secure for normal use.
@@ -39,6 +39,11 @@ from the NSA, you probbly need to [get special computers](https://en.wikipedia.o
 Click the button multiple times to collect [entropy](https://en.wikipedia.org/wiki/Entropy_(computing)). Once you have clicked
 it 31 times there is enough randomness to produce the mnemonic, and from it the public address (as well as the private key 
 and other required information). These values are automatically displayed for you once they are available.
+
+Give the public address to anybody who wants to pay you or from whom you are going to transfer cryptocurrency (such as 
+[Coinbase](https://coinbase.com/)). When you are ready to use the account, you can use a wallet such as 
+[MetaMask](https://metamask.io/). Log out of the existing account if you have one (and have a backup of the twelve words
+for that account) and import a new account using a seed phrase (another name for the mnemonic).
 
 ### Why the Clicking? Can't you Automate That?
 
