@@ -122,12 +122,23 @@ that corresponds to the mnemonic.
 		).derivePath("m/44'/60'/0'/0/0").address : "";
 ```
 
-### Warning
+### Warning: Don't Choose a Memorable Phrase
 
-You could select eleven words from [the list](https://github.com/bitcoin/bips/blob/master/bip-0039/english.txt)
-to create a memorable phrase, and then just add seven random bits to create the last word. For example, you could select this phrase: The **zoo**'s **zebra** **drink**s **sweet** **water** and **wet** **alcohol** with his **family**: **mother**, 
-**father**, and **brother**. 
+It is tempting to select eleven words from [the list](https://github.com/bitcoin/bips/blob/master/bip-0039/english.txt)
+to create a memorable phrase, and then just add seven random bits to create the last word (which is not arbitrary because it 
+contains a checksum). For example, you could select this phrase: The **zoo**'s **zebra** **drink**s **sweet** **water** 
+and **wet** **alcohol** with his **family**: **father**, **mother**, and **brother**. 
 
+***This is a bad idea***. Phrases that you find memorable, such as **zoo zebra** and **sweet water**, are likely to be 
+memorable, and therefore easy to guess, for other people as well. The are <a href=
+"https://www.codecogs.com/eqnedit.php?latex=2^{11}&space;=&space;2048" target="_blank"><img 
+src="https://latex.codecogs.com/gif.latex?2^{11}&space;=&space;2048" title="2^{11} = 2048" /></a> words in the word list, so
+there are <a href="https://www.codecogs.com/eqnedit.php?latex=2048^{11}\approx&space;2&space;\ast&space;10^{36}" target="_blank">
+<img src="https://latex.codecogs.com/gif.latex?2048^{11}\approx&space;2&space;\ast&space;10^{36}" 
+title="2048^{11}\approx 2 \ast 10^{36}" /></a> choices for a random eleven word phrase. However, only 
+<a href="https://www.codecogs.com/eqnedit.php?latex=10\ast2048^{9}\approx&space;6&space;\ast&space;10^{30}" target="_blank">
+<img src="https://latex.codecogs.com/gif.latex?10\ast2048^{9}\approx&space;6&space;\ast&space;10^{30}" title="10\ast2048^{9}\approx 
+6 \ast 10^{30}" /></a> have the phrase **sweet water** in them.
 
 
 ## Conclusion
