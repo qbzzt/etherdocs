@@ -138,7 +138,10 @@ there are <a href="https://www.codecogs.com/eqnedit.php?latex=2048^{11}\approx&s
 title="2048^{11}\approx 2 \ast 10^{36}" /></a> choices for a random eleven word phrase. However, only 
 <a href="https://www.codecogs.com/eqnedit.php?latex=10\ast2048^{9}\approx&space;6&space;\ast&space;10^{30}" target="_blank">
 <img src="https://latex.codecogs.com/gif.latex?10\ast2048^{9}\approx&space;6&space;\ast&space;10^{30}" title="10\ast2048^{9}\approx 
-6 \ast 10^{30}" /></a> have the phrase **sweet water** in them.
+6 \ast 10^{30}" /></a> have the phrase **sweet water** in them. Our of those, only <a href=
+"https://www.codecogs.com/eqnedit.php?latex=10\ast9\ast2048^{7}\approx10^{25}" target="_blank"><img
+src="https://latex.codecogs.com/gif.latex?10\ast9\ast2048^{7}\approx10^{25}" title="10\ast9\ast2048^{7}\approx10^{25}" /></a>
+also have **zoo zebra**. 
 
 
 ## Conclusion
