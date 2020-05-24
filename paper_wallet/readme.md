@@ -87,14 +87,21 @@ with the `0x` prefix.
 	$scope.entropyLeft = () => 34-$scope.entropy.length;
 ```
 
-Once we have enough entropy we can use [`ethers.utils.HDNode.entropyToMnemonic`
-](https://docs.ethers.io/ethers.js/html/api-advanced.html#static-methods) to create the mnemonic. The process is explained
+Once we have enough entropy we can use 
+[`ethers.utils.HDNode.entropyToMnemonic`](https://docs.ethers.io/ethers.js/html/api-advanced.html#static-methods) 
+to create the mnemonic. The process is explained
 [here](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki).
 ```
 	$scope.getMnemonic = () => $scope.entropyLeft() == 0 ? 
 		ethers.utils.HDNode.entropyToMnemonic($scope.entropy) : "";
 ```
 
+In Ethereum (and most other blockchain projects) we use a 
+[Hierarchical Deterministic Wallet](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki) to 
+produce keys and addresses. This lets us create as many keys as we need out of a single source of enthropy,
+organized as a tree. The 
+[`ethers.utils.HDNode.fromMnemonic`](https://docs.ethers.io/ethers.js/html/api-advanced.html#static-methods)
+function creates the root of the tree from the mnemonic. 
 
 ```
 	$scope.getAddr = () => $scope.entropyLeft() == 0 ? 
