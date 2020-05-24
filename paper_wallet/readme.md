@@ -45,7 +45,7 @@ Give the public address to anybody who wants to pay you or from whom you are goi
 [MetaMask](https://metamask.io/). Log out of the existing account if you have one (and have a backup of the twelve words
 for that account) and import a new account using your mnemonic, also called the seed phrase. Then you can use it.
 
-When you want to becomne secure again, just create a new paper wallet address and send the remaining money there.
+When you are done and want to become secure again, just create a new paper wallet address and send the remaining money there.
 
 ### Why the Clicking? Can't you Automate That?
 
