@@ -61,8 +61,8 @@ Every time you click the button the page takes the current time (in milliseconds
 JavaScript method of storing time), divides it by sixteen, and takes the reminder. This number (zero to fifteen) is random
 because humans don't have the ability to time their clicks that accurately. Each click gives us four bits of randomness.
 
-The calculation we use to figure out the mnemonic and address requires over 120 bits of randomness, so we need over thirty
-clicks.
+The calculation we use to figure out the mnemonic and address requires at least 128 bits of randomness, so we need thirty two
+clicks. 
 
 ## The Code
 
@@ -81,17 +81,22 @@ The function `$scope.addHex` adds a hexadecimal digit to `$scope.entropy`.
  	$scope.addHex = () => $scope.entropy += $scope.getHex();
 ```
 
-For us to have enough entropy, we need 31 hexadecimal digits. But the string is 33 characters long with the `0x` prefix.
+For us to have enough entropy, we need thirty two hexadecimal digits. That string is thirty four characters long 
+with the `0x` prefix.
 ```
-	$scope.entropyLeft = () => 33-$scope.entropy.length;
+	$scope.entropyLeft = () => 34-$scope.entropy.length;
 ```
 
 Once we have enough entropy we can use [`ethers.utils.HDNode.entropyToMnemonic`
-](https://docs.ethers.io/ethers.js/html/api-advanced.html#static-methods) to 
+](https://docs.ethers.io/ethers.js/html/api-advanced.html#static-methods) to create the mnemonic. The process is explained
+[here](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki).
 ```
 	$scope.getMnemonic = () => $scope.entropyLeft() == 0 ? 
 		ethers.utils.HDNode.entropyToMnemonic($scope.entropy) : "";
+```
 
+
+```
 	$scope.getAddr = () => $scope.entropyLeft() == 0 ? 
 		ethers.utils.HDNode.fromMnemonic(
 			ethers.utils.HDNode.entropyToMnemonic($scope.entropy)
