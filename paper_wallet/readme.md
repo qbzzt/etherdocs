@@ -141,7 +141,9 @@ title="2048^{11}\approx 2 \ast 10^{36}" /></a> choices for a random eleven word 
 6 \ast 10^{30}" /></a> have the phrase **sweet water** in them. Our of those, only <a href=
 "https://www.codecogs.com/eqnedit.php?latex=10\ast9\ast2048^{7}\approx10^{25}" target="_blank"><img
 src="https://latex.codecogs.com/gif.latex?10\ast9\ast2048^{7}\approx10^{25}" title="10\ast9\ast2048^{7}\approx10^{25}" /></a>
-also have **zoo zebra**. 
+also have **zoo zebra**. Just two memorable two word phrases and we already reduced the key space by a factor of approximately
+<a href="https://www.codecogs.com/eqnedit.php?latex=2\ast10^{11}" target="_blank">
+<img src="https://latex.codecogs.com/gif.latex?2\ast10^{11}" title="2\ast10^{11}" /></a>.
 
 
 ## Conclusion
