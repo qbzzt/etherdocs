@@ -33,16 +33,6 @@ that the people who pay you know your address, and that anybody with that knowle
 they can decode what you see on your screen when you generate the mnemonic and address. If you are tring to keep a secret
 from the NSA, you probbly need to [get special computers](https://en.wikipedia.org/wiki/Tempest_(codename)). 
 
-## The Tools
-
-In addition to the standard HTML and Javascript, the web page uses these tools:
-
-1. [Bootstrap](https://www.w3schools.com/bootstrap/default.asp) for the look and feel.
-1. [Angular](https://www.w3schools.com/angular/default.asp) for interaction between Javascript code and the user.
-1. [Ethers.js](https://docs.ethers.io/ethers.js/html/) for Ethereum functionalty.
-
-The first two are mainstream and well known, so my explanations will focus on Ethers.js.
-
 
 ## Usage
 
@@ -64,7 +54,22 @@ because humans don't have the ability to time their clicks that accurately. Each
 The calculation we use to figure out the mnemonic and address requires at least 128 bits of randomness, so we need thirty two
 clicks. 
 
-## The Code
+## A Programmer's View
+
+This section explains how the web page works. If you are not a programmer, you can skip it.
+
+### The Tools
+
+In addition to the standard HTML and Javascript, the web page uses these tools:
+
+1. [Bootstrap](https://www.w3schools.com/bootstrap/default.asp) for the look and feel.
+1. [Angular](https://www.w3schools.com/angular/default.asp) for interaction between Javascript code and the user.
+1. [Ethers.js](https://docs.ethers.io/ethers.js/html/) for Ethereum functionalty.
+
+The first two are mainstream and well known, so my explanations will focus on Ethers.js.
+
+
+### The Code
 
 This is the code that does the actual work:
 
