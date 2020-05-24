@@ -125,9 +125,8 @@ that corresponds to the mnemonic.
 ### Warning
 
 You could select eleven words from [the list](https://github.com/bitcoin/bips/blob/master/bip-0039/english.txt)
-to create a memorable phrase, and then just add seven random bits to create the last word. For example, you could select this phrase: The **whale** **drink**s **sweet**
-**water** and **wet** **alcohol** with his **family**: **mother**, **father**, 
-**brother**, and **uncle**. 
+to create a memorable phrase, and then just add seven random bits to create the last word. For example, you could select this phrase: The **zoo**'s **zebra** **drink**s **sweet** **water** and **wet** **alcohol** with his **family**: **mother**, 
+**father**, and **brother**. 
 
 
 
