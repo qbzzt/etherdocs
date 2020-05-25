@@ -31,7 +31,7 @@ that the people who pay you know your address, and that anybody with that knowle
 1. **Stealth disclosure**. Even a computer that isn't connected to any network 
 [sends off radio frequency signals](https://www.cl.cam.ac.uk/~mgk25/pet2004-fpd.pdf). If somebody receives those signals,
 they can decode what you see on your screen when you generate the mnemonic and address. If you are tring to keep a secret
-from the NSA, you probbly need to [get special computers](https://en.wikipedia.org/wiki/Tempest_(codename)). 
+from the NSA, you probably need to [get a special computer](https://en.wikipedia.org/wiki/Tempest_(codename)). 
 
 
 ## Usage
