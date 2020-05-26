@@ -47,6 +47,9 @@ for that account) and import a new account using your mnemonic, also called the 
 
 When you are done and want to become secure again, just create a new paper wallet address and send the remaining money there.
 
+And if you have the mnemonic but lost the address, you can [click here](https://qbzzt.github.io/ethereum/verify_address.html) 
+to download an HTML to retrieve it from the mnemonic. 
+
 ### Why the Clicking? Can't you Automate That?
 
 Computers are deterministic. If you and I run the same program and give it the same input, we should receive the same results.
