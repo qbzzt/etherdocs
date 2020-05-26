@@ -2,24 +2,19 @@
 
 ## Ori Pomerantz (qbzzt1@gmail.com)
 
-In this tutorial you learn about a number of HTML "calculators" to use for an Ethereum Paper Wallet setup. 
+In this tutorial you learn about a number of HTML "calculators" you can use for an Ethereum Paper Wallet setup. 
 A ***Paper Wallet*** is an Ethereum address where you provide the public address to various entities 
 that pay you, but keep the twelve word mnemonic that generated it (and therefore the private key that you
 would use to withdraw from the account at that address) a secret on a piece of paper.
-Your account is as safe as that piece of paper, without any risk of your funds being stolen, until you are ready to 
-withdraw the funds. Only then do you need to put the mmnemonic on an Internet connected device and trust to the 
-security of that device. The window of opportunity to attack you is much shorter, making your funds a lot more secure.
+Your account is as safe as that piece of paper until you are ready to withdraw the funds. Only then do you need 
+to put the mmnemonic on an Internet connected device and trust to the security of that device. The window of 
+opportunity to attack you is much shorter, making your funds a lot more secure.
 
-The calculations required to create a safe twelve word mnemonic, and from it a publicly accessible address, are
-complicated enough you have to run them on a computer. At the same time, the whole point of using a paper wallet
-is not to have any private information anywhere on the Internet. The solution I chose is to download an HTML
-from the Internet (along with associated files, such as the JavaScript libraries), disconnect from the Internet,
-do the calculations, and then reboot. I think this is reasonably safe, *although not perfect*.
-
-1. [Paper Wallet](https://qbzzt.github.io/ethereum/paper_wallet.html) lets you
-create an Ethereum address offline on a device not connected to the Internet.
-1. [Address Verifier](https://qbzzt.github.io/ethereum/verify_address.html) is what you use if you either forgot your
-address or want to verify you are handing out the correct one. You type your mnemonic and get the address back.
+The calculations required to create a safe twelve word mnemonic, and from it a publicly accessible address, require 
+a computer. At the same time, the whole point of using a paper wallet is not to have any private information 
+anywhere on the Internet. The solution I chose is to download an HTML from the Internet (along with associated 
+files, such as the JavaScript libraries), disconnect from the Internet, do the calculations, and then reboot. 
+I think this is reasonably safe, *although not perfect*.
 
 ## Disclaimer
 
@@ -30,14 +25,17 @@ while I hope it is a useful tool, there is no warranty, express or implied. *Use
 Here is a partial list of failure modes.
 
 * **Lost mnemomic**. Those twelve words are the only way to transfer funds out of the account. If you lose them, you can
-still gaze upon the balance in your account, but you will not be able to get to it.
-* **Disclosed mnemonic**. This is the mirror image of the previous failure mode. **Anybody** with the mnemonic can
+still gaze longingly upon the balance in your account, but you will not be able to get the funds.
+
+* **Disclosed mnemonic**. This is the mirror image of the previous failure mode. *Anybody* with the mnemonic can
 get your funds. If you think it may have been disclosed, it is best to create a new one and address 
 and immediately transfer everything.
+
 * **Forced disclosure**. For example, if you try to use this to avoid paying income taxes, the
 tax authorities can prosecute you for tax evasion and throw you in jail until you pay them what they think you owe. Remember
 that the people who pay you know your address, and that anybody with that knowledge can go to 
 `https://etherscan.io/address/ <address>` and see the balance it holds.
+
 * **Malware disclosure**. The recommended workflow is:
   1. Download HTML calculator (and associated software) from the Internet.
   1. Disconnect the device
@@ -49,6 +47,7 @@ that the people who pay you know your address, and that anybody with that knowle
   controls it when an Internet connection is available. In theory, it would be better to destroy the device instead of
   using it after a reboot. However, in most cases that the cost is too high compared to the risk to justify this wanton
   destruction.
+  
 * **Stealth disclosure**. Even a computer that isn't connected to any network 
 [sends off radio frequency signals](https://www.cl.cam.ac.uk/~mgk25/pet2004-fpd.pdf). If somebody receives those signals,
 they can decode what you see on your screen when you generate the mnemonic and address. If you are tring to keep a secret
@@ -58,21 +57,25 @@ from the NSA, you probably need to [get a special computer](https://en.wikipedia
 
 ## Usage
 
-Click the button multiple times to collect [entropy](https://en.wikipedia.org/wiki/Entropy_(computing)). Once you have clicked
-it thirty two times there is enough randomness to produce the mnemonic, and from it the public address. These values are 
-automatically displayed for you once they are available.
-
-Give the public address to anybody who wants to pay you or from whom you are going to transfer cryptocurrency (such as 
-[Coinbase](https://coinbase.com/)). When you are ready to use the account, you can use a wallet such as 
+1. Download HTML calculator (and associated software) from the Internet.
+1. Disconnect the device from the Network (switch to airplane mode).
+1. Put in your information to get the result.
+   * If you are using the [Paper Wallet](https://qbzzt.github.io/ethereum/paper_wallet.html) to craete a new address,
+     click the button thirty two times to create the necessary [entropy](https://en.wikipedia.org/wiki/Entropy_(computing)).
+     Write down the mnemonic and store the address on a file on the device to share it.
+   * If you are using the [Address Verifier](https://qbzzt.github.io/ethereum/verify_address.html) to retrieve or verify
+     a public address, type the mnemonic and see the resulting address. 
+1. Reboot to clear the RAM.
+1. Continue to use the device.
+  
+You can give the public address to anybody who wants to pay you or from whom you are going to transfer cryptocurrency 
+(such as [Coinbase](https://coinbase.com/)). When you are ready to use the account, you can use a wallet such as 
 [MetaMask](https://metamask.io/). Log out of the existing account if you have one (and have a backup of the twelve words
 for that account) and import a new account using your mnemonic, also called the seed phrase. Then you can use it.
 
-When you are done and want to become secure again, just create a new paper wallet address and send the remaining money there.
+When you are done and want to become secure again, just create a new paper wallet and send the remaining funds there.
 
-And if you have the mnemonic but lost the address, you can [click here]() 
-to download an HTML to retrieve it from the mnemonic. 
-
-### Why the Clicking? Can't you Automate That?
+### Why the Clicking? Can't you Automate the Entropy?
 
 Computers are deterministic. If you and I run the same program and give it the same input, we should receive the same results.
 This is almost always the desired behavior. However, if you are creating a private key that I shouldn't know (for example, the
