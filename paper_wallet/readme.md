@@ -57,9 +57,9 @@ from the NSA, you probably need to [get a special computer](https://en.wikipedia
 
 ## Usage
 
-1. Download HTML calculator (and associated software) from the Internet.
+1. Download the HTML calculator (and associated software) from the Internet.
 1. Disconnect the device from the Network (switch to airplane mode).
-1. Put in your information to get the result.
+1. Put in your information to get the result:
    * If you are using the [Paper Wallet](https://qbzzt.github.io/ethereum/paper_wallet.html) to craete a new address,
      click the button thirty two times to create the necessary [entropy](https://en.wikipedia.org/wiki/Entropy_(computing)).
      Write down the mnemonic and store the address on a file on the device to share it.
@@ -73,7 +73,7 @@ You can give the public address to anybody who wants to pay you or from whom you
 [MetaMask](https://metamask.io/). Log out of the existing account if you have one (and have a backup of the twelve words
 for that account) and import a new account using your mnemonic, also called the seed phrase. Then you can use it.
 
-When you are done and want to become secure again, just create a new paper wallet and send the remaining funds there.
+When you are done and want to become secure again, create a new paper wallet and send the remaining funds there.
 
 ### Why the Clicking? Can't you Automate the Entropy?
 
