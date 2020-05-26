@@ -36,17 +36,11 @@ tax authorities can prosecute you for tax evasion and throw you in jail until yo
 that the people who pay you know your address, and that anybody with that knowledge can go to 
 `https://etherscan.io/address/ <address>` and see the balance it holds.
 
-* **Malware disclosure**. The recommended workflow is:
-  1. Download HTML calculator (and associated software) from the Internet.
-  1. Disconnect the device
-  1. Put in your information to get the result
-  1. Reboot to clear the RAM
-  1. Continue to use the device
-  
-  If the device has malware, that malware might record your keystrokes or screen to disk and then send it to whoever 
-  controls it when an Internet connection is available. In theory, it would be better to destroy the device instead of
-  using it after a reboot. However, in most cases that the cost is too high compared to the risk to justify this wanton
-  destruction.
+* **Malware disclosure**. It is recommended to reboot the device to clear the RAM after you use the calculators. 
+However, if the device has malware, that malware might record your keystrokes or screen to disk and then send it to whoever 
+controls it when an Internet connection is available. In theory, it would be better to destroy the device instead of
+using it after a reboot. However, in most cases that the cost is too high compared to the risk to justify this wanton
+destruction.
   
 * **Stealth disclosure**. Even a computer that isn't connected to any network 
 [sends off radio frequency signals](https://www.cl.cam.ac.uk/~mgk25/pet2004-fpd.pdf). If somebody receives those signals,
