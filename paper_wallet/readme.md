@@ -89,6 +89,33 @@ because humans don't have the ability to time their clicks that accurately. Each
 The calculation we use to figure out the mnemonic and address requires at least 128 bits of randomness, so we need thirty two
 clicks. 
 
+
+### Warning: Don't Just Choose a Memorable Phrase
+
+It is tempting to select eleven words from 
+[the list of mnemonic words](https://github.com/bitcoin/bips/blob/master/bip-0039/english.txt)
+to create a memorable phrase, and then just add seven random bits to create the last word (the last four bits are a checksum). 
+For example, you could select this phrase: The **zoo**'s **zebra** **drink**s **sweet** **water** and **wet** **alcohol** with 
+his **family**: **father**, **mother**, and **brother**. 
+
+***This is a bad idea***. Phrases that you find memorable, such as **zoo zebra** and **sweet water**, are likely to be 
+memorable, and therefore easy to guess, for other people as well. The are <a href=
+"https://www.codecogs.com/eqnedit.php?latex=2^{11}&space;=&space;2048" target="_blank"><img 
+src="https://latex.codecogs.com/gif.latex?2^{11}&space;=&space;2048" title="2^{11} = 2048" /></a> words in the word list, so
+there are <a href="https://www.codecogs.com/eqnedit.php?latex=2048^{11}\approx&space;2&space;\times&space;10^{36}" target="_blank">
+<img src="https://latex.codecogs.com/gif.latex?2048^{11}\approx&space;2&space;\times&space;10^{36}" 
+title="2048^{11}\approx 2 \times 10^{36}" /></a> choices for a random eleven word phrase. However, only 
+<a href="https://www.codecogs.com/eqnedit.php?latex=10\times2048^{9}\approx&space;6&space;\times&space;10^{30}" target="_blank">
+<img src="https://latex.codecogs.com/gif.latex?10\times2048^{9}\approx&space;6&space;\times&space;10^{30}" title="10\times2048^{9}\approx 
+6 \times 10^{30}" /></a> have the phrase **sweet water** in them. Out of those, only <a href=
+"https://www.codecogs.com/eqnedit.php?latex=10\times9\times2048^{7}\approx10^{25}" target="_blank"><img
+src="https://latex.codecogs.com/gif.latex?10\times9\times2048^{7}\approx10^{25}" title="10\times9\times2048^{7}\approx10^{25}" /></a>
+also have **zoo zebra**. Just two memorable two word phrases and we already reduced the key space by a factor of approximately
+<a href="https://www.codecogs.com/eqnedit.php?latex=2\times10^{11}" target="_blank">
+<img src="https://latex.codecogs.com/gif.latex?2\times10^{11}" title="2\times10^{11}" /> </a>.
+
+
+
 ## A Programmer's View
 
 This section explains how the web page works. If you are not a programmer, you can skip it.
@@ -156,31 +183,6 @@ that corresponds to the mnemonic.
 			ethers.utils.HDNode.entropyToMnemonic($scope.entropy)
 		).derivePath("m/44'/60'/0'/0/0").address : "";
 ```
-
-### Warning: Don't Just Choose a Memorable Phrase
-
-It is tempting to select eleven words from [the list](https://github.com/bitcoin/bips/blob/master/bip-0039/english.txt)
-to create a memorable phrase, and then just add seven random bits to create the last word (which is not arbitrary because it 
-contains a checksum). For example, you could select this phrase: The **zoo**'s **zebra** **drink**s **sweet** **water** 
-and **wet** **alcohol** with his **family**: **father**, **mother**, and **brother**. 
-
-***This is a bad idea***. Phrases that you find memorable, such as **zoo zebra** and **sweet water**, are likely to be 
-memorable, and therefore easy to guess, for other people as well. The are <a href=
-"https://www.codecogs.com/eqnedit.php?latex=2^{11}&space;=&space;2048" target="_blank"><img 
-src="https://latex.codecogs.com/gif.latex?2^{11}&space;=&space;2048" title="2^{11} = 2048" /></a> words in the word list, so
-there are <a href="https://www.codecogs.com/eqnedit.php?latex=2048^{11}\approx&space;2&space;\times&space;10^{36}" target="_blank">
-<img src="https://latex.codecogs.com/gif.latex?2048^{11}\approx&space;2&space;\times&space;10^{36}" 
-title="2048^{11}\approx 2 \times 10^{36}" /></a> choices for a random eleven word phrase. However, only 
-<a href="https://www.codecogs.com/eqnedit.php?latex=10\times2048^{9}\approx&space;6&space;\times&space;10^{30}" target="_blank">
-<img src="https://latex.codecogs.com/gif.latex?10\times2048^{9}\approx&space;6&space;\times&space;10^{30}" title="10\times2048^{9}\approx 
-6 \times 10^{30}" /></a> have the phrase **sweet water** in them. Out of those, only <a href=
-"https://www.codecogs.com/eqnedit.php?latex=10\times9\times2048^{7}\approx10^{25}" target="_blank"><img
-src="https://latex.codecogs.com/gif.latex?10\times9\times2048^{7}\approx10^{25}" title="10\times9\times2048^{7}\approx10^{25}" /></a>
-also have **zoo zebra**. Just two memorable two word phrases and we already reduced the key space by a factor of approximately
-<a href="https://www.codecogs.com/eqnedit.php?latex=2\times10^{11}" target="_blank">
-<img src="https://latex.codecogs.com/gif.latex?2\times10^{11}" title="2\times10^{11}" /> </a>.
-
-
 
 
 
