@@ -6,12 +6,9 @@ In this essay I am going to attempt to explain [Ethereum](https://ethereum.org/)
 
 ## Background
 
-Our economy is based on trade, and trade is based on commitments. 
+Our economy is based on specialization and trade. Trade requires commitments, promises that are often formalized in 
+contracts. 
 
-
-## Commitments are the Lifeblood of the Economy
-Our economy is based on commitments, promises that are often formalized in contracts. Many of the biggest problems in the economy 
-result from people either reneging on their commitments or using “creative interpretation” to weasel out of them.
 
 ## Blockchains
 At its root, a blockchain is a mechanism to tie commitments together, in a way that makes it extremely difficult to 
