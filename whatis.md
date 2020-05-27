@@ -1,8 +1,13 @@
 # What can Ethereum Do?
 ### Ori Pomerantz qbzzt1@gmail.com 
 
-In this essay I am going to attempt to explain [Ethereum](https://ethereum.org/) and why I think this general concept 
+In this essay I am going to attempt to explain [Ethereum](https://ethereum.org/) and why I think the general concept 
 (blockchain verified computer programs) is going to be incredibly important for our economic future.
+
+## Background
+
+Our economy is based on trade, and trade is based on commitments. 
+
 
 ## Commitments are the Lifeblood of the Economy
 Our economy is based on commitments, promises that are often formalized in contracts. Many of the biggest problems in the economy 
