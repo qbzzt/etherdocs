@@ -10,12 +10,16 @@ Our economy is based on specialization and trade. Trade requires commitments, pr
 contracts. Contracts are supposed to be enforced by the court system, but that system is slow and inefficient. 
 [According to Court Statistics Project](http://www.courtstatistics.org/~/media/microsites/files/csp/data%20pdf/csph_online2.ashx) 
 the median cost for contract litigation is $91,000 (see p. 7). This means that many times breaches of contract are allowed
-because the cost to litigate them is higher than the cost of the breach.
+because the cost to litigate them is higher than the likely compensation for the breach.
 
 ### Why are Courts Inefficient?
 
-There is no cabal of lawyers, plotting in the shadows to make courts inefficient. Contract litigation is expensive because it
-is a difficult problem. There are several 
+There is no secret cabal of lawyers, plotting in the shadows to make courts inefficient. Or at least, I have never heard for 
+one. Contract litigation is expensive because it is a difficult problem. There are several factors that make 
+contract interpretation and enforcement difficult.
+
+* **Ambiguous language**. When drafting contracts lawyers are supposed to make the meaning of each clause as 
+  clear as possible. However, human language is not designed for unambiguous communication. 
 
 
 
