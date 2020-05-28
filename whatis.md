@@ -7,7 +7,12 @@ In this essay I am going to attempt to explain [Ethereum](https://ethereum.org/)
 ## Background
 
 Our economy is based on specialization and trade. Trade requires commitments, promises that are often formalized in 
-contracts. 
+contracts. Contracts are supposed to be enforced by the court system, but that system is slow and inefficient. 
+[According to Court Statistics Project](http://www.courtstatistics.org/~/media/microsites/files/csp/data%20pdf/csph_online2.ashx) 
+the median cost for contract litigation is $91,000 (see p. 7). This means that many times breaches of contract are allowed
+because the cost to litigate them is higher than the cost of the breach.
+
+
 
 
 ## Blockchains
