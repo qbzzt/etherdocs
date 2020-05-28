@@ -12,6 +12,13 @@ contracts. Contracts are supposed to be enforced by the court system, but that s
 the median cost for contract litigation is $91,000 (see p. 7). This means that many times breaches of contract are allowed
 because the cost to litigate them is higher than the cost of the breach.
 
+### Why are Courts Inefficient?
+
+There is no cabal of lawyers, plotting in the shadows to make courts inefficient. Contract litigation is expensive because it
+is a difficult problem. There are several 
+
+
+
 
 
 
