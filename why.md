@@ -52,7 +52,14 @@ that I spent twice, once with Alice and once with you. But the basic vulnerabili
 If you had known I had already given Alice $7, you'd know I only had $3 and wouldn't trust me when I said I have $5 to pay
 you. This is the problem that blockchains solve.
 
+
 ### Public Commitments and Blockchains
+
+There is a very simple solution to the double spending problem. Send all money transfer messages to a central repository,
+and only count the money as having been transfered after the central repository approves that the money transfer. This is what 
+we do with bank accounts when we use debit cards, after all. We tell the bank "pay $x to Y", and wait for an acknowledgement
+that the transfer took place. This solves the double spending problem, because the central authority knows exactly how much 
+each identity has at any point.
 
 
 
