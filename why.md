@@ -31,14 +31,15 @@ to passing bad checks:
 
 1. I get a signed message from the bank saying I have $10 on deposit.
 1. In return for services rendered, I give you a signed message stating that:
-   - I have $10, as proved by the bank's message with I attach
+   - I have $10, as proved by the bank's message which I attach
    - I give you $5 from my deposit
-1. At the same time I give somebody else a different signed message stating that:
-   - I have $10, as proved by the bank's message with I attach
+1. At the same time I give Alice else a different signed message stating that:
+   - I have $10, as proved by the bank's message which I attach
    - I give them $7 from my deposit
-1. 
+1. Alice's message gets to the bank first. They see that I signed a legitimate transfer and give Alice the $7.
+1. When your message gets to the bank, the bank doesn't have the promised money in the account anymore and you can't get it.
    
-
+The vulnerability here is that 
 
 
 
