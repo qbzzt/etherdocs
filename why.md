@@ -29,14 +29,15 @@ using its private key to sign that a particular public key does indeed match tha
 Unfortunately, protocols that use this process are still vulnerabe to some forms of abuse. One of the simplest is analogous
 to passing bad checks:
 
-1. You offer to do something, for example let me download an ebook you wrote, in return for $5.
-1. I accept the offer and forward you a signed message from my bank saying that I have $10 in my account so I would be able
-   to pay you, as well as a promise to pay you $5 after I download the book.
-1. You let me download the ebook file. You do this before I pay because otherwise I'm afraid you might cheat me and not provide me
-   with the promised ebook.
-1. While I am downloading the book, I create another identity and send that identity the $10 in my account.
-1. When you present the bank with my signed promise to pay you $5, 
-
+1. I get a signed message from the bank saying I have $10 on deposit.
+1. In return for services rendered, I give you a signed message stating that:
+   - I have $10, as proved by the bank's message with I attach
+   - I give you $5 from my deposit
+1. At the same time I give somebody else a different signed message stating that:
+   - I have $10, as proved by the bank's message with I attach
+   - I give them $7 from my deposit
+1. 
+   
 
 
 
