@@ -39,7 +39,7 @@ to passing bad checks:
 1. Alice's message gets to the bank first. They see that I signed a legitimate transfer and give Alice the $7.
 1. When your message gets to the bank, the bank doesn't have the promised money in the account anymore and you can't get it.
    
-The vulnerability here is that 
+The source of the vulnerability is that messages are private. 
 
 
 
