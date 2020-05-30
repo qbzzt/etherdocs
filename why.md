@@ -17,10 +17,33 @@ the courts. Ethereum is essentially another such mechanism, one that works in a 
 authority.
 
 
-## Blockchains and Decentralized Trust
+## Trust and Computer Protocols
 
-A blockchain is a way to tie messages together, so that to vouch for one of them being true an entity has to vouch that
-all of them are true.
+Computer protocols work by transferring messages. Messages can be authenticated as having come from a specific identity,
+a combination of a private key used to sign messages and a public key that is used to authenticate them. This is how you 
+know, for example, that when connect to your bank's website for online banking you are connected to the correct site and not 
+a fake. The login form is signed by the bank's private key, and your browser uses the bank's public key to verify that 
+signature. The certificates you may have heard about are another level of this process, with a certificate authority
+using its private key to sign that a particular public key does indeed match that bank's private key.
+
+Unfortunately, protocols that use this process are still vulnerabe to some forms of abuse. One of the simplest is analogous
+to passing bad checks:
+
+1. You offer to do something, for example let me download an ebook you wrote, in return for $5.
+1. I accept the offer and forward you a signed message from my bank saying that I have $10 in my account so I would be able
+   to pay you, as well as a promise to pay you $5 after I download the book.
+1. You let me download the ebook file. You do this before I pay because otherwise I'm afraid you might cheat me and not provide me
+   with the promised ebook.
+1. While I am downloading the book, I create another identity and send that identity the $10 in my account.
+1. When you present the bank with my signed promise to pay you $5, 
+
+
+
+
+
+
+A blockchain is a way to tie messages together, so that to vouch for one of them being authentic (received at the stated time
+and signed by the stated key) an entity has to vouch that all of them are authentic. This means that 
 
 
 ## 
