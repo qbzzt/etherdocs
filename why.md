@@ -1,28 +1,29 @@
 # What can Ethereum Do?
-8### Ori Pomerantz qbzzt1@gmail.com 
+### Ori Pomerantz qbzzt1@gmail.com 
 
 In this essay I am going to attempt to explain [Ethereum](https://ethereum.org/) and why I think the general concept 
 (blockchain verified computer programs) is going to be incredibly important for our economic future.
 
-## Background
+## Background: The Value of Trust
 
 The basic of our economic system is trust. My employer trusts that even though I work from home with minimal supervision,
 the work I'm assigned will get done. I trust that they'll deposit the agreed upon salary into my bank account, and that the
-bank will keep accurate count. When I go to Target to buy food, I trust that the food is what the package promises. Target 
-trusts that when I use my debit card the bank will transfer the correct amount to their account.
+bank will not "disappear" that money. When I go to Target to buy food, I trust that the food is what the package promises. 
+Target trusts me not to claim my debit card was stolen and attempt to reverse the charges, and the bank to transfer the correct
+amount of money from my account to Target's.
+
+Over time we evolved many mechanisms to verify and enforce this trust such as credit reports, regulatory bodies, and 
+the courts. Ethereum is essentially another such mechanism, one that works in a distributed fashion without a central 
+authority.
 
 
+## Blockchains and Decentralized Trust
+
+A blockchain is a way to tie messages together, so that to vouch for one of them being true an entity has to vouch that
+all of them are true.
 
 
-### Why are Courts Inefficient?
-
-There is no secret cabal of lawyers, plotting in the shadows to make courts inefficient. Or at least, I have never heard for 
-one. Contract litigation is expensive because it is a difficult problem. There are several factors that make 
-contract interpretation and enforcement difficult.
-
-* **Ambiguous language**. When drafting contracts lawyers are supposed to make the meaning of each clause as 
-  clear as possible. However, human language is not designed for unambiguous communication. 
-
+## 
 
 
 
