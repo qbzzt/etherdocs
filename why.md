@@ -70,15 +70,20 @@ to maintain it.
 Blockchains deal with the trust problem in a different way. Instead of private messages (for example, between you
 and the bank), messages are broadcast and tied together in a way that makes it extremely difficult to remove or
 modify one of them without invalidating subsequent messages. This means that anybody who relies on subsequent messages
-on the blockchain has a vested interest in preserving your message accurately. Instead of trusting a single central
-authority, you trust that the majority of the blockchain's nodes are honest. As I am writing this [there are over 7000
-Ethereum nodes](https://www.ethernodes.org/). Subverting enough nodes to subvert the entire network would be a very
-difficult task.
+on the blockchain has a vested interest in preserving your message accurately. This has several important effects:
 
+* Instead of trusting a single central authority, you trust that the majority of the blockchain's nodes are honest. 
+  As I am writing this [there are over 7000 Ethereum nodes](https://www.ethernodes.org/). Subverting enough nodes to 
+  subvert the entire network would be a very difficult task.
+* There is no point subverting a small number of nodes, so the likelihood of attack on any specific node, and 
+  therefore the effort required to secure it, is a lot smaller. This makes it a lot easier to run nodes, which 
+  increases their number and further decreases the value of subverting any individual node.
+  
 
+## Ethereum
 
-### Ethereum
 Ethereum takes the blockchain concept a level further by allowing whole contracts to be written in a computer language 
 and executed in a manner that anybody can verify on a blockchain. This means they are deterministic, and it is possible to 
-know in advance what a contract will enforce given a set of inputs. There is no room for subjective interpretation, or even 
-honest misunderstandings.
+know in advance what a contract will enforce given a set of inputs.
+
+
