@@ -48,41 +48,33 @@ identity ([see here for instructions how to do it Ethereum to see how easy it is
 as they could use.
 
 This is called [the double spending problem](https://www.investopedia.com/terms/d/doublespending.asp). I have two dollars 
-that I spent twice, once with Alice and once with you. But the basic vulnerability is the private nature of the messages.
+that I spent twice, once with Alice and once with you. The basic vulnerability is the private nature of the messages.
 If you had known I had already given Alice $7, you'd know I only had $3 and wouldn't trust me when I said I have $5 to pay
 you. This is the problem that blockchains solve.
 
 
-### Public Commitments and Blockchains
+### Public Messages and Blockchains
 
 There is a very simple solution to the double spending problem. Send all money transfer messages to a central repository,
-and only count the money as having been transfered after the central repository approves that the money transfer. This is what 
+and only count the money as having been transfered after the central repository approves that money transfer. This is what 
 we do with bank accounts when we use debit cards, after all. We tell the bank "pay $x to Y", and wait for an acknowledgement
 that the transfer took place. This solves the double spending problem, because the central authority knows exactly how much 
 each identity has at any point.
 
+The problem is that this process requires complete trust in the central authority. As a society we currently use a
+[long and expensive licensing process](https://www.federalreserve.gov/faqs/banking_12779.htm) to establish this trust, and
+[regular complex audits that are also expensive](https://www.occ.gov/publications-and-resources/publications/comptrollers-handbook/files/internal-external-audits/pub-ch-audits.pdf) 
+to maintain it.
+
+Blockchains deal with the trust problem in a different way. Instead of private messages (for example, between you
+and the bank), messages are broadcast and tied together in a way that makes it extremely difficult to remove or
+modify one of them without invalidating subsequent messages. This means that anybody who relies on subsequent messages
+on the blockchain has a vested interest in preserving your message accurately. Instead of trusting a single central
+authority, you trust that the majority of the blockchain's nodes are honest. As I am writing this [there are over 7000
+Ethereum nodes](https://www.ethernodes.org/). Subverting enough nodes to subvert the entire network would be a very
+difficult task.
 
 
-
-
-
-A blockchain is a way to tie messages together, so that to vouch for one of them being authentic (received at the stated time
-and signed by the stated key) an entity has to vouch that all of them are authentic. This means that 
-
-
-## 
-
-
-
-
-
-## Blockchains
-At its root, a blockchain is a mechanism to tie commitments together, in a way that makes it extremely difficult to 
-pretend that a commitment does not exist, or to hide it. For example, bitcoin uses a blockchain for currency transactions. 
-At any moment anybody can check my balance and see how many bitcoins (BTC) I have. If I have ten BTC and I commit that you get five 
-of them, everybody sees that I now only have five left. If I then try to commit to give somebody else seven BTC, it will be 
-immediately clear that this commitment is impossible. This is much safer commerce than giving you a $5 check and then somebody 
-else a $7 check, where the first one to the bank gets the money and the second gets a bounced check. 
 
 ### Ethereum
 Ethereum takes the blockchain concept a level further by allowing whole contracts to be written in a computer language 
