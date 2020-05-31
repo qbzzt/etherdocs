@@ -28,13 +28,12 @@ using its private key to sign that a particular public key does indeed match tha
 
 ### Bad Checks and Double Spending
 
-Unfortunately, protocols that use this process are still vulnerabe to some forms of abuse. One of the simplest is analogous
-to passing bad checks:
+Unfortunately, protocols that use this process are still vulnerabe to some forms of abuse. Here is a very simple one:
 
 1. I get a signed message from the bank saying I have $10 on deposit.
 1. I give Alice a signed message stating that:
    - I have $10, as proved by the bank's message which I attach
-   - I give them $7 from my deposit
+   - I give her $7 from my deposit
 1. In return for services rendered, I give you a signed message stating that:
    - I have $10, as proved by the bank's message which I attach
    - I give you $5 from my deposit
@@ -44,8 +43,9 @@ to passing bad checks:
 This is the same as if I had given Alice a check for $7 and you a check for $5 drawn on the same bank account that only
 has a balance of $10. Physical banks require proof of identity before they open a bank account, so it is well known
 who passed the bad checks and they can be punished for it. However, in the digital world it is easy to create an extra
-identity ([see here for instructions how to do it Ethereum to see how easy it is](https://github.com/qbzzt/etherdocs/tree/master/paper_wallet)) and therefore people can have as many throw away "identities"
-as they could use.
+identity ([see here for instructions on how to create a new Ethereum identity to see how easy it 
+is](https://github.com/qbzzt/etherdocs/tree/master/paper_wallet)) and therefore people can have as many 
+throw away "identities" as they want.
 
 This is called [the double spending problem](https://www.investopedia.com/terms/d/doublespending.asp). I have two dollars 
 that I spent twice, once with Alice and once with you. The basic vulnerability is the private nature of the messages.
@@ -57,13 +57,14 @@ you. This is the problem that blockchains solve.
 
 There is a very simple solution to the double spending problem. Send all money transfer messages to a central repository,
 and only count the money as having been transfered after the central repository approves that money transfer. This is what 
-we do with bank accounts when we use debit cards, after all. We tell the bank "pay $x to Y", and wait for an acknowledgement
+we do with bank accounts when we use debit cards. We tell the bank "pay $x to Y", and wait for an acknowledgement
 that the transfer took place. This solves the double spending problem, because the central authority knows exactly how much 
 each identity has at any point.
 
 The problem is that this process requires complete trust in the central authority. As a society we currently use a
 [long and expensive licensing process](https://www.federalreserve.gov/faqs/banking_12779.htm) to establish this trust, and
-[regular complex audits that are also expensive](https://www.occ.gov/publications-and-resources/publications/comptrollers-handbook/files/internal-external-audits/pub-ch-audits.pdf) 
+[regular complex
+audits](https://www.occ.gov/publications-and-resources/publications/comptrollers-handbook/files/internal-external-audits/pub-ch-audits.pdf) 
 to maintain it.
 
 Blockchains deal with the trust problem in a different way. Instead of private messages (for example, between you
