@@ -87,10 +87,12 @@ and executed in a manner that anybody can verify on a blockchain. This means the
 read the contract's current state and check what it will enforce in the future given various inputs. Removing ambiguity 
 in this manner removes some of the causes for expensive and inefficient litigation.
 
-For example, take an unsecured loan. An unsecured loan can follow this structure:
+For example, take a secured loan. It is composed of this pattern:
 
-1. On day one the lender gives the borrower a certain sum (the principal)
-1. At some point (`n` days later) the borrower gives the lender a different sum (`p+i`)
-
-
+1. The lender gives the borrower a certain amount (the principal)
+1. There is a payment schedule with these properties: 
+  - Ideally, the borrower pays back in accordance with the schedule
+  - Borrowers who default on the payment schedule by a certain amount (of time and money) can return to compliance by 
+    paying the money owned and a penalty (calculated using a known function)
+  - When a borrower's default reaches a certain threshold the collateral becomes the property of the lender
 
