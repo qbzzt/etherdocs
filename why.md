@@ -83,7 +83,6 @@ on the blockchain has a vested interest in preserving your message accurately. T
 ## Ethereum
 
 Ethereum takes the blockchain concept a level further by allowing whole contracts to be written in a computer language 
-and executed in a manner that anybody can verify on a blockchain. This means they are deterministic, and it is possible to 
-know in advance what a contract will enforce given a set of inputs.
-
+and executed in a manner that anybody can verify on a blockchain. This means they are public and deterministed. Anybody can 
+read the contract's current state and check what it will enforce in the future given various inputs. 
 
