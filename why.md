@@ -89,14 +89,15 @@ in this manner removes some of the causes for expensive and inefficient litigati
 
 For example, take real estate ownership. Typically, there are several entities involved in the ownership:
 
-1. **The owner** who holds the title. This ownership can be represented by the ownership of a 
-   [non-fungible token](https://en.wikipedia.org/wiki/Non-fungible_token) that represented the title.
-1. **The mortgage lender** who holds a lien and is allowed to foreclose on the mortgage under specified conditions
-   (typically a default that the owner does not rectify without a certain amount of time).
-1. **The property tax authority** which must be paid a certain percent of the property's value (minus certain exemptions)
-   every year. If the property tax authority is not paid, it may foreclose on the property with a tax lien foreclosure.
-1. **The assessor** whose job is to determine the value of the property for tax purposes.
-1. **The appeal board** that can override the assessor's assessment.
-1. **The court** that can change property ownership in special cases. For example, to satisfy a judgement against the owner.
+1. **The owner**
+1. **The mortgage lender**
+1. **The property tax authority** 
+1. **The assessor** 
+1. **The appeal board**
+1. **The court** 
+
+Under certain predefined conditions either the mortgage lender or the property tax authority is allowed to 
+foreclose and take the property. Right now, such repossesions are 
+[very expensive](http://www.mortgagenewsdaily.com/622008_Foreclosure_Costs.asp). 
 
 
