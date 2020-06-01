@@ -93,11 +93,13 @@ For example, take real estate ownership. Typically, there are several entities i
 1. **The mortgage lender**
 1. **The property tax authority** 
 1. **The assessor** 
-1. **The appeal board**
-1. **The court** 
+1. **The appeal board** when the owner and assessor don't agree on the property's value
+1. **The court system** for other issues such as divorce, bankruptcy in the absence of a mortgage, inheritence 
+  in the absence of a will, etc.
 
 Under certain predefined conditions either the mortgage lender or the property tax authority is allowed to 
 foreclose and take the property. Right now, this process is  
-[very expensive](http://www.mortgagenewsdaily.com/622008_Foreclosure_Costs.asp). 
+[very expensive](http://www.mortgagenewsdaily.com/622008_Foreclosure_Costs.asp). This drives competitors 
+out of the market and raises the cost of borrowing.
 
 
