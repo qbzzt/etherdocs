@@ -87,4 +87,3 @@ and executed in a manner that anybody can verify on a blockchain. This means the
 read the contract's current state and check what it will enforce in the future given various inputs. Removing ambiguity 
 in this manner removes some of the causes for expensive and inefficient litigation.
 
-
