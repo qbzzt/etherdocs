@@ -102,9 +102,10 @@ Because human language is always subject to interpretation, a borrower can use l
 collateral. Also, both sides are required to keep records of payments to make sure the other side isn't cheating. This 
 friction makes lending more risky and borrowing more expensive.
 
-Using Ethereum it is possible to create a public loan contract. If the courts accept it as sufficient evidence, title
-to the collateral can be represented by a [non-fungible token](https://en.wikipedia.org/wiki/Non-fungible_token). Then
-the Ethereum contract can handle the details:
+Using Ethereum it is possible to create a public loan contract (in Ethereum the word contract is used for an independent
+piece of software that runs on the blockchain). Title to the collateral can be represented by a 
+[non-fungible token](https://en.wikipedia.org/wiki/Non-fungible_token). The Ethereum contract can handle almost all 
+the details:
 
 1. The lender sends a message to the contract with:
    - The identity of the borrower
@@ -116,8 +117,18 @@ the Ethereum contract can handle the details:
 1. The borrower sends a message to the contract with:
     - The identity of the lender
     - The token representing the collateral
-    - The mutually agreed upon terms:
-      - Repayment schedule
-      - Delinquency penalty formula
-      - Definition of when a delinquency becomes a default
+    - The mutually agreed upon terms (same list as above)
+1. The contract verifies that the terms agreed upon really are identical, and then sends the principal to the 
+   borrower. If there are no agreed upon terms, the contract sends the lender back the money and the borrower
+   back the title for the collateral.
+1. The borrower makes payments to the contract, which the contract then sends to the lender. This way, the
+   contract can monitor compliance with the repayment schedule.
+1. If the borrower is delinquent, the contract adjusts the payment schedule accordingly (adding the penalty
+   function). At any point the borrower can query the contract to get the updated payment schedule and the
+   payment history.
+1. If the borrower is in default, the lender can ask the contract for the collateral, which is then transferred
+   to the lender.
+   
+It is also possible for the lender, the borrower, or a third party to periodically activate the contract to send 
+payment reminders to borrowers.
     
