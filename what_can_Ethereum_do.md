@@ -138,7 +138,7 @@ accepting that whoever owns the non fungible token owns the collateral. All the 
 the blockchain.
 
 
-== Conclusion
+## Conclusion
 
 Ethereum is not panacea, it cannot physically change who has possession of physical assets or deal with unanticipated
 circumstances. However, in an economy as complex as ours, it can provide a cheap and easy source of trust and sometimes
