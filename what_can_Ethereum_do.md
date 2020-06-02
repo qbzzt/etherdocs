@@ -6,7 +6,7 @@ In this essay I am going to attempt to explain [Ethereum](https://ethereum.org/)
 
 ## Background: The Value of Trust
 
-The basic of our economic system is trust. My employer trusts that even though I work from home with minimal supervision,
+The basis of our economic system is trust. My employer trusts that even though I work from home with minimal supervision,
 the work I'm assigned will get done. I trust that they'll deposit the agreed upon salary into my bank account, and that the
 bank will not "disappear" that money. When I go to Target to buy food, I trust that the food is what the package promises. 
 Target trusts me not to claim my debit card was stolen and attempt to reverse the charges, and the bank to transfer the correct
