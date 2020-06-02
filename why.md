@@ -87,14 +87,37 @@ and executed in a manner that anybody can verify on a blockchain. This means the
 read the contract's current state and check what it will enforce in the future given various inputs. Removing ambiguity 
 in this manner removes some of the causes for expensive and inefficient litigation.
 
-For example, take a secured loan. It is composed of this pattern:
+For example, take a secured loan. It has these elements:
 
 * The lender gives the borrower a certain amount (the principal)
-* There is a payment schedule with these properties: 
-* Ideally, the borrower pays back in accordance with the schedule
-* Borrowers who default on the payment schedule by a certain amount (of time and money) can return 
-  to compliance by paying the money owned and a penalty (calculated using a known function)
-* When a borrower's default reaches a certain threshold the collateral becomes the property of the lender
-* Changes to the payment schedule require the approval of both sides.
+* There is a mutually agreed upon repayment schedule 
+* The borrower is supposed to pay back in accordance with the schedule
+* Borrowers who are delinquent can get back into compliance by paying what they owe plus a penalty,
+  calculated by a mutually agreed formula
+* At a certain (preagreed) point the delinquency becomes a default, and the collateral becomes the property of
+  the lender
+* Changes to the payment schedule require the approval of both sides
 
-Currently foreclosure often requires litigation to have a court review the 
+Because human language is always subject to interpretation, a borrower can use litigation to postpone the loss of the 
+collateral. Also, both sides are required to keep records of payments to make sure the other side isn't cheating. This 
+friction makes lending more risky and borrowing more expensive.
+
+Using Ethereum it is possible to create a public loan contract. If the courts accept it as sufficient evidence, title
+to the collateral can be represented by a [non-fungible token](https://en.wikipedia.org/wiki/Non-fungible_token). Then
+the Ethereum contract can handle the details:
+
+1. The lender sends a message to the contract with:
+   - The identity of the borrower
+   - The principal (in the form of a cryptocurrency)
+   - The mutually agreed upon terms:
+     - Repayment schedule
+     - Delinquency penalty formula
+     - Definition of when a delinquency becomes a default
+1. The borrower sends a message to the contract with:
+    - The identity of the lender
+    - The token representing the collateral
+    - The mutually agreed upon terms:
+      - Repayment schedule
+      - Delinquency penalty formula
+      - Definition of when a delinquency becomes a default
+    
