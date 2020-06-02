@@ -132,3 +132,14 @@ the details:
 It is also possible for the lender, the borrower, or a third party to periodically activate the contract to send 
 payment reminders to borrowers.
     
+The only case in which courts would need to be involved is if the borrower, having lost the title to the collateral,
+insists on keeping it. And in that case it would be an extremely simple case as long as the borrower signed a contract
+accepting that whoever owns the non fungible token owns the collateral. All the other facts that easy to prove from
+the blockchain.
+
+
+== Conclusion
+
+Ethereum is not panacea, it cannot physically change who has possession of physical assets or deal with unanticipated
+circumstances. However, in an economy as complex as ours, it can provide a cheap and easy source of trust and sometimes
+replace time consuming and costly litigation.
