@@ -91,8 +91,10 @@ For example, take a secured loan. It is composed of this pattern:
 
 * The lender gives the borrower a certain amount (the principal)
 * There is a payment schedule with these properties: 
-  - Ideally, the borrower pays back in accordance with the schedule
-  - Borrowers who default on the payment schedule by a certain amount (of time and money) can return to compliance by 
-    paying the money owned and a penalty (calculated using a known function)
-  - When a borrower's default reaches a certain threshold the collateral becomes the property of the lender
+* Ideally, the borrower pays back in accordance with the schedule
+* Borrowers who default on the payment schedule by a certain amount (of time and money) can return 
+  to compliance by paying the money owned and a penalty (calculated using a known function)
+* When a borrower's default reaches a certain threshold the collateral becomes the property of the lender
+* Changes to the payment schedule require the approval of both sides.
 
+Currently foreclosure often requires litigation to have a court review the 
