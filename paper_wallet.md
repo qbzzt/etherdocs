@@ -112,7 +112,7 @@ also have **zoo zebra**. Just two memorable two word phrases and we already redu
 
 ## A Programmer's View
 
-This section explains how the web page works. If you are not a programmer, you can skip it.
+This section explains how the web pages work. If you are not a programmer, you can skip it.
 
 ### The Tools
 
