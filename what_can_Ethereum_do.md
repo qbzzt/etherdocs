@@ -44,7 +44,7 @@ This is the same as if I had given Alice a check for $7 and you a check for $5 d
 has a balance of $10. Physical banks require proof of identity before they open a bank account, so it is well known
 who passed the bad checks and they can be punished for it. However, in the digital world it is easy to create an extra
 identity ([see here for instructions on how to create a new Ethereum identity to see how easy it 
-is](https://github.com/qbzzt/etherdocs/tree/master/paper_wallet)) and therefore people can have as many 
+is](https://github.com/qbzzt/etherdocs/blob/master/paper_wallet.md)) and therefore people can have as many 
 throw away "identities" as they want.
 
 This is called [the double spending problem](https://www.investopedia.com/terms/d/doublespending.asp). I have two dollars 
