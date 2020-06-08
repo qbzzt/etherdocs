@@ -6,4 +6,8 @@ solve it.
 
 ## Background: Consensus and Scaling
 
-Rather than relying on a trusted central authority, blockchains rely on consensus. This means that 
+Rather than relying on a trusted central authority, blockchains rely on consensus. The problem is
+that consensus doesn't scale very well. This problem is especially bad in Ethereum, because nodes don't 
+just relay data, they have to actually execute the software that is embedded in contracts. In December
+2019, [Ethereum averaged 12-15 transactions per 
+second](https://blog.bybit.com/research-and-analysis/ethereum-blockchain-performance-and-scalability/).
