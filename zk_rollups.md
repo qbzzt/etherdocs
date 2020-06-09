@@ -40,26 +40,26 @@ participant can release the information, or a function of that information, and 
 commitments will be able to verify that it is indeed the committed information.
 
 A very simple example is signing the output of a hash function. I have some information, 
-<img src="https://latex.codecogs.com/gif.latex?I" alt="I" style="vertical-align:middle">. In the 
+<img src="https://latex.codecogs.com/gif.latex?I" alt="I">. In the 
 future, I might want to prove to you that I've known 
-<img src="https://latex.codecogs.com/gif.latex?I" alt="I" style="vertical-align:middle"> 
+<img src="https://latex.codecogs.com/gif.latex?I" alt="I"> 
 since the present time, 
-<img src="https://latex.codecogs.com/gif.latex?t_0" alt="t_0" style="vertical-align:middle">. 
+<img src="https://latex.codecogs.com/gif.latex?t_0" alt="t_0">. 
 This information can be, for example, details of an invention I do not wish to expose yet.
 
 I can calculate a cryptographic hash of the information, 
-<img src="https://latex.codecogs.com/gif.latex?H(I)" alt="H(I)" style="vertical-align:middle">.
+<img src="https://latex.codecogs.com/gif.latex?H(I)" alt="H(I)">.
 Then I sign this hash and send it to you with the signature. For now, you know that I committed that I know something
 that hashes to 
-<img src="https://latex.codecogs.com/gif.latex?H(I)" alt="H(I)" style="vertical-align:middle">.
+<img src="https://latex.codecogs.com/gif.latex?H(I)" alt="H(I)">.
 Because of the properties of the cryptographic hash, you cannot obtain the original 
-<img src="https://latex.codecogs.com/gif.latex?I" title="I" style="vertical-align:middle"> from this value.
+<img src="https://latex.codecogs.com/gif.latex?I" title="I"> from this value.
 
-At a later time <img src="https://latex.codecogs.com/gif.latex?t_1" alt="t_1" style="vertical-align:middle"> 
+At a later time <img src="https://latex.codecogs.com/gif.latex?t_1" alt="t_1"> 
 if I decide to reveal the information to you you can calculate 
-<img src="https://latex.codecogs.com/gif.latex?H(I)" alt="H(I)" style="vertical-align:middle"> on your own, and see that it
+<img src="https://latex.codecogs.com/gif.latex?H(I)" alt="H(I)"> on your own, and see that it
 is indeed equal to the hash you've received from me previously at 
-<img src="https://latex.codecogs.com/gif.latex?t_0" alt="t_0" style="vertical-align:middle">.
+<img src="https://latex.codecogs.com/gif.latex?t_0" alt="t_0">.
 
 
 ### Polynomial Commitments
