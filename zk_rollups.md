@@ -13,9 +13,9 @@ just relay data, they have to actually execute the software that is embedded in 
 second](https://blog.bybit.com/research-and-analysis/ethereum-blockchain-performance-and-scalability/).
 
 
-## Rollups
+## Avoiding the 
 
-The preferred solution is to roll multiple transactions up into a single transaction. 
+
 
 ## Plonk
 
