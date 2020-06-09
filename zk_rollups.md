@@ -39,9 +39,27 @@ commits the participant to certain information without revealing that informatio
 participant can release the information, or a function of that information, and the recipients of the 
 commitments will be able to verify that it is indeed the committed information.
 
-A very simple example is signing the output of a hash function. I have some information, *I*. In the 
-future, I might want to prove to you that I've known *I* since the present time, 
-<img src="https://latex.codecogs.com/gif.latex?t_0" title="t_0">.
+A very simple example is signing the output of a hash function. I have some information, 
+<img src="https://latex.codecogs.com/gif.latex?I" alt="I" style="vertical-align:middle">. In the 
+future, I might want to prove to you that I've known 
+<img src="https://latex.codecogs.com/gif.latex?I" alt="I" style="vertical-align:middle"> 
+since the present time, 
+<img src="https://latex.codecogs.com/gif.latex?t_0" alt="t_0" style="vertical-align:middle">. 
+This information can be, for example, details of an invention I do not wish to expose yet.
+
+I can calculate a cryptographic hash of the information, 
+<img src="https://latex.codecogs.com/gif.latex?H(I)" alt="H(I)" style="vertical-align:middle">.
+Then I sign this hash and send it to you with the signature. For now, you know that I committed that I know something
+that hashes to 
+<img src="https://latex.codecogs.com/gif.latex?H(I)" alt="H(I)" style="vertical-align:middle">.
+Because of the properties of the cryptographic hash, you cannot obtain the original 
+<img src="https://latex.codecogs.com/gif.latex?I" title="I" style="vertical-align:middle"> from this value.
+
+At a later time <img src="https://latex.codecogs.com/gif.latex?t_1" alt="t_1" style="vertical-align:middle"> 
+if I decide to reveal the information to you you can calculate 
+<img src="https://latex.codecogs.com/gif.latex?H(I)" alt="H(I)" style="vertical-align:middle"> on your own, and see that it
+is indeed equal to the hash you've received from me previously at 
+<img src="https://latex.codecogs.com/gif.latex?t_0" alt="t_0" style="vertical-align:middle">.
 
 
 ### Polynomial Commitments
