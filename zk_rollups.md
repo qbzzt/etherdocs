@@ -11,12 +11,19 @@ that consensus doesn't scale very well. This problem is especially bad in Ethere
 just relay data, they have to actually execute the software that is embedded in contracts. In December
 2019, [Ethereum averaged 12-15 transactions per 
 second](https://blog.bybit.com/research-and-analysis/ethereum-blockchain-performance-and-scalability/).
+This is enough to develop the technology and ecosystem, but not nearly enough for mass market adoption.
 
 
 ### Is This Really Necessary?
 
+If we examine the problem, it's not really necessary for all the nodes to run the program for a 
+transaction. At least one node has to actually run the program to get from the input state of the
+contract to the output state, but the other nodes can get the proposed output state and just verify
+that it is correct. Surprisingly, this second task can be accomplished much more easily using a 
+field of cryptography called [Zero Knowledge Proofs](https://en.wikipedia.org/wiki/Zero-knowledge_proof).
 
 
+## Mathematical Building Blocks
 
 
 ## Plonk
