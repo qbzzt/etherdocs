@@ -11,3 +11,12 @@ that consensus doesn't scale very well. This problem is especially bad in Ethere
 just relay data, they have to actually execute the software that is embedded in contracts. In December
 2019, [Ethereum averaged 12-15 transactions per 
 second](https://blog.bybit.com/research-and-analysis/ethereum-blockchain-performance-and-scalability/).
+
+
+## Rollups
+
+The preferred solution is to roll multiple transactions up into a single transaction. 
+
+## Plonk
+
+https://vitalik.ca/general/2019/09/22/plonk.html
