@@ -26,12 +26,29 @@ field of cryptography called [Zero Knowledge Proofs](https://en.wikipedia.org/wi
 ## Mathematical Building Blocks
 
 To explain how it is possible to verify a program's output without running it requires several 
-mathematical building blocks beyond those of basic cryptography (hash functions, private/public key
-pairs, and so on).
+mathematical building blocks beyond those of basic cryptography ([hash 
+functions](https://en.wikipedia.org/wiki/Cryptographic_hash_function), [private/public key
+pairs](https://en.wikipedia.org/wiki/Public-key_cryptography), and so on).
+
 
 ### Commitments
 
-### Polynoms
+The first building block we need to understand is commitments. A [cryptographic 
+commitment](https://en.wikipedia.org/wiki/Commitment_scheme) is a message signed by a participant, that 
+commits the participant to certain information without revealing that information. In the future, that 
+participant can release the information, or a function of that information, and the recipients of the 
+commitments will be able to verify that it is indeed the committed information.
+
+A very simple example is signing the output of a hash function. I have some information, *I*. In the 
+future, I might want to prove to you that I've known *I* since the present time, 
+<a href="https://www.codecogs.com/eqnedit.php?latex=t_0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?t_0"/></a>
+
+
+### Polynomial Commitments
+
+A more interesting type of commitment allows you to commit to certain information, and then provide 
+the output of additional functions of it, without ever revealing the original information itself. 
+
 
 ### Turning Programs into Polynoms
 
