@@ -13,7 +13,9 @@ just relay data, they have to actually execute the software that is embedded in 
 second](https://blog.bybit.com/research-and-analysis/ethereum-blockchain-performance-and-scalability/).
 
 
-## Avoiding the 
+### Is This Really Necessary?
+
+
 
 
 
