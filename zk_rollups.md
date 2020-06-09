@@ -29,6 +29,12 @@ To explain how it is possible to verify a program's output without running it re
 mathematical building blocks beyond those of basic cryptography (hash functions, private/public key
 pairs, and so on).
 
+### Commitments
+
+### Polynoms
+
+### Turning Programs into Polynoms
+
 
 
 ## Plonk
