@@ -25,6 +25,11 @@ field of cryptography called [Zero Knowledge Proofs](https://en.wikipedia.org/wi
 
 ## Mathematical Building Blocks
 
+To explain how it is possible to verify a program's output without running it requires several 
+mathematical building blocks beyond those of basic cryptography (hash functions, private/public key
+pairs, and so on).
+
+
 
 ## Plonk
 
