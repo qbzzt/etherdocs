@@ -41,7 +41,7 @@ commitments will be able to verify that it is indeed the committed information.
 
 A very simple example is signing the output of a hash function. I have some information, *I*. In the 
 future, I might want to prove to you that I've known *I* since the present time, 
-<a href="https://www.codecogs.com/eqnedit.php?latex=t_0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?t_0"/></a>
+<img src="https://latex.codecogs.com/gif.latex?t_0"/ title="t_0">.
 
 
 ### Polynomial Commitments
