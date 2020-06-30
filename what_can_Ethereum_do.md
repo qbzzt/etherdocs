@@ -4,6 +4,8 @@
 In this essay I am going to attempt to explain [Ethereum](https://ethereum.org/) and why I think the general concept 
 (blockchain verified computer programs) is going to be incredibly important for our economic future.
 
+Note: If you prefer, you can [watch a presentation](https://youtu.be/ZL9YtKlb8Vk).
+
 ## Background: The Value of Trust
 
 The basis of our economic system is trust. My employer trusts that even though I work from home with minimal supervision,
