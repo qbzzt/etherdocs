@@ -36,7 +36,6 @@ which you will use later to deploy the contract to a test network.
 ```
 mkdir workdir
 cd workdir
-npm init    # It doesn't matter what information you put here
 truffle init
 npm install @truffle/hdwallet-provider
 ```
