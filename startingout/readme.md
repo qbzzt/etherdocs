@@ -16,7 +16,7 @@ you are using Windows,
 You can [download them from here](https://nodejs.org/en/download/package-manager/). 
 
 2. Install [the truffle development environment](https://www.trufflesuite.com/docs/truffle/overview) and 
-[the ganache blockchain simulator](https://www.trufflesuite.com/ganache). The `-g` parameter declares that this 
+[the ganache blockchain simulator](https://www.trufflesuite.com/ganache). The **-g** parameter declares that this 
 package is to be installed globally, for all users of this computer. That requires root privileges.
 ```
 sudo npm install -g truffle ganache-cli
@@ -29,9 +29,9 @@ With the environment set up, you can create a contract.
 ### Create the Skeleton
 
 Contracts require a somewhat complicated directory structure. The easiest way to create it is to use
-`truffle init`.
+**truffle init**.
 
-1. Create a new directory and initialize truffle. You also need to install `@truffle/hdwallet-provider`,
+1. Create a new directory and initialize truffle. You also need to install **@truffle/hdwallet-provider**,
 which you will use later to deploy the contract to a test network.
 ```
 mkdir workdir
@@ -39,7 +39,7 @@ cd workdir
 truffle init
 npm install @truffle/hdwallet-provider
 ```
-2. Edit `truffle-config.js`. Make sure the edited file includes these lines:
+2. Edit **truffle-config.js**. Make sure the edited file includes these lines:
 ```javascript
 module.exports = {
   networks: {
@@ -55,9 +55,9 @@ module.exports = {
 
 ### Write the Contract
 
-Write the contract in the `contracts` directory. Here is a simple contract [(you can get the source code without the 
+Write the contract in the **contracts** directory. Here is a simple contract [(you can get the source code without the 
 explanatory text here)](https://raw.githubusercontent.com/qbzzt/etherdocs/master/startingout/Counter.sol). For the rest of the 
-tutorial, I am going to assume this is the contract you're using, and that it is stored in `contracts/Counter.sol`.
+tutorial, I am going to assume this is the contract you're using, and that it is stored in **contracts/Counter.sol**.
 
 This line specifies the acceptable versions of the Solidity programming language. In this case we only allow 
 0.5.x versions. 
@@ -65,14 +65,14 @@ This line specifies the acceptable versions of the Solidity programming language
 pragma solidity >=0.5.0 <0.6.0;
 ```
 
-Define a contract called `Counter`. A contract functions in many ways like 
+Define a contract called **Counter**. A contract functions in many ways like 
 [a class in Object Oriented Programming](https://en.wikipedia.org/wiki/Class_(computer_programming)). 
 It contains variables and methods.
 ```solidity
 contract Counter {
 ```
 
-This is a field variable. The type, `uint`, is a 256 bit unsigned integer. All the fields in a contract are 
+This is a field variable. The type, **uint**, is a 256 bit unsigned integer. All the fields in a contract are 
 effectively public. Ethereum code is executed by multiple computers in multiple locations, and can be verified 
 by anybody. This would be impossible if some part of the contract state had been unreadable.
 ```solidity
@@ -86,11 +86,11 @@ receive the response that way.
         event Asked4Value(uint, address);
 ```
 
-The `increment` function does not take any parameters. It increments `value` and then emits 
-an `Asked4Value` event with the new value and the identity of the caller to which it is responding
-(`msg.sender` means the sender of this message).
+The **increment** function does not take any parameters. It increments **value** and then emits 
+an **Asked4Value** event with the new value and the identity of the caller to which it is responding
+(**msg.sender** means the sender of this message).
 
-The `external` modifier means that this function can only be called from outside the contract. By default 
+The **external** modifier means that this function can only be called from outside the contract. By default 
 functions are internal, and are only accessible from within the contract. This function needs to be called 
 from outside the contract.
 ```solidity
@@ -112,8 +112,8 @@ ganache-cli -v
 ```
 truffle compile
 ```
-3. Connect to the Ganache network you are running locally. The `development` network is the default, so 
-`--network development` is optional.
+3. Connect to the Ganache network you are running locally. The **development** network is the default, so 
+**--network development** is optional.
 ```
 truffle console --network development
 ```
@@ -121,7 +121,7 @@ truffle console --network development
 ```javascript
 contract = await Counter.new()
 ```
-5. Run the `increment` function:
+5. Run the **increment** function:
 ```javascript
 contract.incremenet()
 ```
@@ -131,9 +131,9 @@ value, run this:
 (await contract.getPastEvents())[0].returnValues[0]
 ```
 7. Repeat the previous two steps several times to see the counter is
-incremented correctly. Then type `.exit` to return to the command line.
+incremented correctly. Then type **.exit** to return to the command line.
 
-As you may have realized from the commands above, `truffle` executes JavaScript. The `await` keyword is used in
+As you may have realized from the commands above, **truffle** executes JavaScript. The **await** keyword is used in
 JavaScript when a process can take a long time to avoid tying up the process 
 ([you can read more about it here](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Async_await)).
 
@@ -147,9 +147,9 @@ The tests are based on [Mocha](https://mochajs.org/) and [Chai](https://www.chai
 beyond the very basic tests here, 
 [see the Truffle documentation](https://www.trufflesuite.com/docs/truffle/testing/writing-tests-in-javascript). 
 
-Tests are supposed to go in the `test` directory, and are typically written in JavaScript (you can also write them in Solidity, 
-[see here](https://www.trufflesuite.com/docs/truffle/testing/writing-tests-in-solidity)). This is `test/counter.js`, 
-which contains a number of tests for the `Counter` contract. To get just the file without the comments, 
+Tests are supposed to go in the **test** directory, and are typically written in JavaScript (you can also write them in Solidity, 
+[see here](https://www.trufflesuite.com/docs/truffle/testing/writing-tests-in-solidity)). This is **test/counter.js**, 
+which contains a number of tests for the **Counter** contract. To get just the file without the comments, 
 [click here](https://raw.githubusercontent.com/qbzzt/etherdocs/master/startingout/counter.js).
 
 
@@ -166,7 +166,7 @@ a list of accounts it can use.
 contract("Counter", async accounts => {
 ```
 
-One way to separate tests is to put them in `it` clauses. Each such clause contains a string
+One way to separate tests is to put them in **it** clauses. Each such clause contains a string
 for what should happen, and a function that actually tests it.
 
 ```javascript
@@ -174,7 +174,7 @@ for what should happen, and a function that actually tests it.
 ```
 
 Deploy an instance of the contract, and wait until it is deployed before you continue. Then, call
-the `increment` method and wait for it to be done.
+the **increment** method and wait for it to be done.
 
 ```javascript
                 var counter = await Counter.new();
@@ -187,8 +187,8 @@ This is how you get a record of the events emitted by a contract.
                 const events = await counter.getPastEvents();
 ```              
 
-When a contract emits just one event for a transaction, that event is available in `events[0]`. The information 
-emitted is in an array called `returnValues`. 
+When a contract emits just one event for a transaction, that event is available in **events[0]**. The information 
+emitted is in an array called **returnValues**. 
 
 ```javascript
                 const retVal = events[0].returnValues[0];
@@ -210,9 +210,9 @@ is the correct number.
                         arr.push(counter.increment());
 ```
 
-[`Promise.all`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) 
+[**Promise.all**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) 
 only returns when all the Promises in an array have been resolved. In this case, after all ten transaction
-have been processed. Using `Promise.all` lets the transactions be processed in parallel, instead of having 
+have been processed. Using **Promise.all** lets the transactions be processed in parallel, instead of having 
 to wait until a transaction is done before starting up the next one.
 
 ```javascript
@@ -259,7 +259,7 @@ If you do not have a GitHub account, [get one here](https://github.com/join).
 
 #### Truffle Configuration
 
-Edit the project's truffle configuration file (by default `truffle-config.js`, although it can also be `truffle.js`).
+Edit the project's truffle configuration file (by default **truffle-config.js**, although it can also be **truffle.js**).
 
 At the top of the file configure the package you use to communicate, the Kovan URL, and the twelve word mnemonic that lets
 truffle know your private key:
@@ -270,7 +270,7 @@ var mnemonic = '<your value goes here>';
 var kovanUrl = "https://kovan.infura.io/v3/c3422181d0594697a38defe7706a1e5b";
 ```
 
-Within the `networks` definition add another network (and remember to add a comma between network definitions):
+Within the **networks** definition add another network (and remember to add a comma between network definitions):
 
 ```javascript
     kovan: {
@@ -282,7 +282,7 @@ Within the `networks` definition add another network (and remember to add a comm
 ### Deploy and Test
 
 Deploying to Kovan takes a lot longer, because everything has to be properly written into the blockchain. 
-Also, we don't want to redeploy each time, so we make a note of the address to which the contract is deployed.
+We don't want to redeploy each time, so we make a note of the address to which the contract is deployed.
 
 1. Start the console to connect to Kovan.
 ```bash
@@ -297,7 +297,8 @@ contract.address
 
 
 **Note:** If you know an existing contract's address, and you have the compiled version for it, you can use the contract 
-from truffle's console mode. For example, I created an instance of `Counter` and deployed it to the address `0xB2086099f3b764a167B923A670bf8A7FbD46A1c6`. Here is how you can get to the contract for that deployment and then
+from truffle's console mode. For example, I created an instance of **Counter** and deployed it to the address 
+**0xB2086099f3b764a167B923A670bf8A7FbD46A1c6**. Here is how you can get to the contract for that deployment and then
 increment it:
 
 ```javascript
@@ -309,14 +310,14 @@ await contract.increment()
 
 
 3. To increment the counter and get the result you run this code in the truffle console. Calling the blockchain
-is a slow process that requires `await`.
+is a slow process that requires **await**.
 ```javascript
 results = await contract.increment()
 results.logs[0].args[0].toString()
 ```
 
 4. If you want to run your automated tests on Kovan you can do that, but it is slow and expensive, and tests could
-fail due to a timeout. The tests in `counter.js` cost me 0.0153 Ether (which luckily is free on Kovan) and took about
+fail due to a timeout. The tests in **counter.js** cost me 0.0153 Ether (which luckily is free on Kovan) and took about
 52 seconds.
 ```bash
 truffle test --network kovan
@@ -325,8 +326,9 @@ truffle test --network kovan
 
 ## Web User Interface
 
-Solidity contracts are backend constructs. For users to be able to use [a decentralized application (dapp)](https://www.coindesk.com/learn/ethereum-101/what-is-a-decentralized-application-dapp) they need a front end they could access,
-typically provided by a web server. 
+Solidity contracts are backend constructs. For users to be able to use 
+[a decentralized application (dapp)](https://www.coindesk.com/learn/ethereum-101/what-is-a-decentralized-application-dapp)
+they need a front end they could access, typically provided by a web server. 
 
 You can see a user interface for Counter using the Kovan network [here](https://qbzzt.github.io/ethereum/counter.html).
 
@@ -335,8 +337,8 @@ You can see a user interface for Counter using the Kovan network [here](https://
 To access the contract we need two pieces of information:
 
 1. The address, which you already know how to retrieve.
-1. The ABI (application binary interface). You can get this information from `build/contracts/<contract>.json`.
-For example, here is the ABI for `Counter`:
+1. The ABI (application binary interface). You can get this information from **build/contracts/<contract>.json**.
+For example, here is the ABI for **Counter**:
 
 ```json
  [
@@ -380,7 +382,7 @@ you might be trying to steal information from them.
 You can [see the full HTML file here](https://raw.githubusercontent.com/qbzzt/etherdocs/master/startingout/counter.html). 
 I am only going to explain the parts that are Ethereum specific.
 
-Note that for security reasons you cannot access MetaMask when you open a file locally, so you'll need to 
+For security reasons you cannot access MetaMask when you open a file locally, so you'll need to 
 browse to it off of a web server.
 
 #### Setup
@@ -408,7 +410,7 @@ const counterData = {
 ```
 
 To interact with Ethereum we use a provider. The standard is for the wallet software (such as MetaMask) to expose a
-`Web3Provider` object in `window.ethereum`. The ethers.js library uses a different provider object, so we create an 
+**Web3Provider** object in **window.ethereum**. The ethers.js library uses a different provider object, so we create an 
 ethers.js provider out of the one we got from the wallet.
 
 ```javascript
@@ -432,7 +434,7 @@ The user can then select what account and network to use.
 ```
 
 
-This `Contract` object is used to communicate with the contract on the blockchain. The address and ABI fields are the 
+This **Contract** object is used to communicate with the contract on the blockchain. The address and ABI fields are the 
 contract information.
 
 ```javascript
@@ -442,7 +444,7 @@ contract information.
 ```
 
 To send messages to the contract you need to have an identity with [ether](https://ethereum.org/eth/#what-is-ether-eth) to pay
-for processing and sign the transaction. Use `provider.getSigner()` to get the current signer identity from the wallet (MetaMask
+for processing and sign the transaction. Use **provider.getSigner()** to get the current signer identity from the wallet (MetaMask
 or any other crypto wallet). 
 
 ```javascript
@@ -473,7 +475,7 @@ write the block number and the time it took.
 
 #### Listen to Events
 
-This function listens to `Asked4Value` events. It is not as slow as `increment` above, but it still has some slow processes,
+This function listens to **Asked4Value** events. It is not as slow as **increment** above, but it still has some slow processes,
 so it is also asynchronous. It is called by the script itself, so it is run during the page load process.
 
 ```javascript
@@ -482,8 +484,8 @@ const getUpdates = async () => {
 	const dataLengthHex = dataLengthBits/4;
 ```
 
-We also need a `Contract` object to listen to events. However, read-only actions, such as listening to events, are free. There
-is no need for a signer, so we can just use the `Provider` object (we could have also used the signer we used in the
+We also need a **Contract** object to listen to events. However, read-only actions, such as listening to events, are free. There
+is no need for a signer, so we can just use the **Provider** object (we could have also used the signer we used in the
 previous function).
 
 ```javascript
@@ -493,8 +495,8 @@ previous function).
 	);
 ```
 
-The `contract.on` function take two parameters: a filter, and a function to call every time an event that matches the 
-filter happens. In `contract.interface.events` you can find filters for all the events in the ABI.
+The **contract.on** function take two parameters: a filter, and a function to call every time an event that matches the 
+filter happens. In **contract.interface.events** you can find filters for all the events in the ABI.
 
 ```javascript
 	contract.on(contract.interface.events.Asked4Value,
@@ -508,17 +510,17 @@ was sent.
 				`Increment #${incrementInvoked}`);
 ```
 
-The information we know about the event come from `evt`, 
-[an `Event` object](https://docs.ethers.io/ethers.js/html/api-contract.html#event-object). 
+The information we know about the event come from **evt**, 
+[an **Event** object](https://docs.ethers.io/ethers.js/html/api-contract.html#event-object). 
 
 ```javascript
 			writeToDiv("events", 
 				`Got an event: ${JSON.stringify(evt)}`);
 ```
 
-The `evt` variable contains a field, `data`, with the parameters to the event. Those parameters are a `uint` (a 256
-bit unsigned integer) and an `address`. To get only the first parameter (and the `0x` prefix that marks the number
-as hexadecimal), we look only at the first few characters. The `parseInt` function then turns the string into a 
+The **evt** variable contains a field, **data**, with the parameters to the event. Those parameters are a **uint** (a 256
+bit unsigned integer) and an **address**. To get only the first parameter (and the `0x` prefix that marks the number
+as hexadecimal), we look only at the first few characters. The **parseInt** function then turns the string into a 
 number we can display as a decimal.
 
 ```javascript
