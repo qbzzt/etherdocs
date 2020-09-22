@@ -54,7 +54,7 @@ from the NSA, you probably need to [get a special computer](https://en.wikipedia
 1. Download the HTML calculator (and associated software) from the Internet.
 1. Disconnect the device from the Network (switch to airplane mode).
 1. Put in your information to get the result:
-   * If you are using the [Paper Wallet](https://qbzzt.github.io/ethereum/paper_wallet.html) to craete a new address,
+   * If you are using the [Paper Wallet](https://qbzzt.github.io/ethereum/paper_wallet.html) to create a new address,
      click the button thirty two times to create the necessary [entropy](https://en.wikipedia.org/wiki/Entropy_(computing)).
      Write down the mnemonic and store the address on a file on the device to share it.
    * If you are using the [Address Verifier](https://qbzzt.github.io/ethereum/verify_address.html) to retrieve or verify
