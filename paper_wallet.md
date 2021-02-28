@@ -93,7 +93,7 @@ For example, you could select this phrase: The **zoo**'s **zebra** **drink**s **
 his **family**: **father**, **mother**, and **brother**. 
 
 ***This is a bad idea***. Phrases that you find memorable, such as **zoo zebra** and **sweet water**, are likely to be 
-memorable, and therefore easy to guess, for other people as well. The are <a href=
+memorable, and therefore easy to guess, for other people as well. There are <a href=
 "https://www.codecogs.com/eqnedit.php?latex=2^{11}&space;=&space;2048" target="_blank"><img 
 src="https://latex.codecogs.com/gif.latex?2^{11}&space;=&space;2048" title="2^{11} = 2048" /></a> words in the word list, so
 there are <a href="https://www.codecogs.com/eqnedit.php?latex=2048^{11}\approx&space;2&space;\times&space;10^{36}" target="_blank">
