@@ -22,8 +22,7 @@
           "description": "An array with one structure",
           "required": true,
           "schema": {
-            "type": "array",
-            "minimum": 1
+            "$ref": "#/components/schemas/Chains"
           }
         }
       ],
@@ -170,7 +169,7 @@
         "type": "integer",
         "minimum": 0
       },
-      "Pet": {
+      "Chain": {
         "type": "object",
         "required": [
           "id",
@@ -188,10 +187,10 @@
           }
         }
       },
-      "Pets": {
+      "Chain": {
         "type": "array",
         "items": {
-          "$ref": "#/components/schemas/Pet"
+          "$ref": "#/components/schemas/Chain"
         }
       }
     }
