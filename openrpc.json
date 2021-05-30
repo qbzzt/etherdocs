@@ -9,20 +9,20 @@
   },
   "methods": [
     {
-      "name": "list_pets",
-      "summary": "List all pets",
+      "name": "test_setChainParams",
+      "summary": "Initialize the blockchain for a new test",
       "tags": [
         {
-          "name": "pets"
+          "name": "test"
         }
       ],
       "params": [
         {
-          "name": "limit",
-          "description": "How many items to return at one time (max 100)",
-          "required": false,
+          "name": "Chain parameters",
+          "description": "An array with one structure",
+          "required": true,
           "schema": {
-            "type": "integer",
+            "type": "array",
             "minimum": 1
           }
         }
