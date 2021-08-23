@@ -15,7 +15,7 @@ Target trusts me not to claim my debit card was stolen and attempt to reverse th
 amount of money from my account to Target's.
 
 Over time we evolved many mechanisms to verify and enforce this trust such as credit reports, regulatory bodies, and 
-the courts. Ethereum is essentially another such mechanism, one that works in a distributed fashion without a central 
+the courts. Blockchain is essentially another such mechanism, one that works in a distributed fashion without a central 
 authority.
 
 
